@@ -1,0 +1,2164 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Wrapit — Fresh Grocery Delivered in Minutes</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <!-- Material Symbols Outlined (Exact required format) -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "tertiary-container": "#c9f9e0",
+            "on-primary-container": "#5d7331",
+            "surface-tint": "#506625",
+            "primary-fixed": "#d2ec9d",
+            "on-surface-variant": "#45483c",
+            "inverse-primary": "#b6d083",
+            "secondary-fixed": "#65fdb5",
+            "on-primary-fixed": "#141f00",
+            outline: "#75796a",
+            "primary-fixed-dim": "#b6d083",
+            background: "#f2fcf5",
+            "on-error": "#ffffff",
+            "inverse-surface": "#29322e",
+            "tertiary-fixed": "#beedd4",
+            "surface-container-high": "#e0ebe4",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed-variant": "#244f3d",
+            "inverse-on-surface": "#e9f3ec",
+            tertiary: "#3c6753",
+            "on-surface": "#151d1a",
+            "on-error-container": "#93000a",
+            "on-tertiary": "#ffffff",
+            "tertiary-fixed-dim": "#a3d1b9",
+            surface: "#f2fcf5",
+            "surface-container-low": "#ecf6ef",
+            "on-background": "#151d1a",
+            "secondary-container": "#62fab2",
+            "surface-container": "#e6f0e9",
+            "secondary-fixed-dim": "#42e09a",
+            "on-secondary-fixed-variant": "#005233",
+            secondary: "#006c45",
+            "surface-container-highest": "#dbe5de",
+            "primary-container": "#ddf8a7",
+            "on-secondary-container": "#007149",
+            "surface-variant": "#dbe5de",
+            "on-primary-fixed-variant": "#394d0f",
+            "surface-dim": "#d2dcd6",
+            "on-secondary": "#ffffff",
+            "on-tertiary-fixed": "#002115",
+            "on-secondary-fixed": "#002112",
+            "outline-variant": "#c5c8b8",
+            "error-container": "#ffdad6",
+            primary: "#506625",
+            "surface-container-lowest": "#ffffff",
+            error: "#ba1a1a",
+            "on-tertiary-container": "#497460",
+            "surface-bright": "#f2fcf5"
+          },
+          borderRadius: {
+            DEFAULT: "1rem",
+            lg: "2rem",
+            xl: "3rem",
+            full: "9999px"
+          },
+          spacing: {
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            gutter: "1rem",
+            "space-xs": "0.25rem",
+            "space-xxs": "0.125rem",
+            "space-xl": "2rem",
+            "margin-mobile": "1rem",
+            margin: "2rem",
+            "gutter-mobile": "0.75rem",
+            "space-xxl": "3rem"
+          },
+          fontFamily: {
+            "body-sm": ["DM Sans", "sans-serif"],
+            "display-hero": ["Bricolage Grotesque", "sans-serif"],
+            "headline-md": ["Bricolage Grotesque", "sans-serif"],
+            "label-md": ["DM Sans", "sans-serif"],
+            "title-md": ["DM Sans", "sans-serif"],
+            "headline-sm": ["Bricolage Grotesque", "sans-serif"],
+            "body-md": ["DM Sans", "sans-serif"],
+            "price-hero": ["Bricolage Grotesque", "sans-serif"],
+            "headline-lg-mobile": ["Bricolage Grotesque", "sans-serif"],
+            "display-hero-mobile": ["Bricolage Grotesque", "sans-serif"],
+            "headline-lg": ["Bricolage Grotesque", "sans-serif"],
+            "body-lg": ["DM Sans", "sans-serif"],
+            "label-sm": ["DM Sans", "sans-serif"],
+            "label-lg": ["DM Sans", "sans-serif"],
+            "price-catalog": ["DM Sans", "sans-serif"],
+            headline: ["Bricolage Grotesque", "sans-serif"],
+            display: ["Bricolage Grotesque", "sans-serif"],
+            body: ["DM Sans", "sans-serif"],
+            label: ["DM Sans", "sans-serif"]
+          },
+          fontSize: {
+            "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }],
+            "display-hero": ["48px", { lineHeight: "52px", fontWeight: "800" }],
+            "headline-md": ["22px", { lineHeight: "28px", fontWeight: "700" }],
+            "label-md": ["12px", { lineHeight: "16px", fontWeight: "700" }],
+            "title-md": ["16px", { lineHeight: "22px", fontWeight: "700" }],
+            "headline-sm": ["18px", { lineHeight: "24px", fontWeight: "600" }],
+            "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+            "price-hero": ["24px", { lineHeight: "28px", fontWeight: "800" }],
+            "headline-lg-mobile": ["26px", { lineHeight: "30px", fontWeight: "700" }],
+            "display-hero-mobile": ["32px", { lineHeight: "36px", fontWeight: "800" }],
+            "headline-lg": ["36px", { lineHeight: "42px", fontWeight: "700" }],
+            "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+            "label-sm": ["10px", { lineHeight: "12px", fontWeight: "700" }],
+            "label-lg": ["14px", { lineHeight: "18px", fontWeight: "700" }],
+            "price-catalog": ["15px", { lineHeight: "18px", fontWeight: "700" }]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+      font-size: 20px;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .material-symbols-outlined.fill,
+    .material-symbols-outlined[data-weight="fill"],
+    .material-symbols-fill {
+      font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 24;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    .cursor-blink {
+      animation: blink 1s infinite;
+    }
+    @keyframes rider-move {
+      0% { offset-distance: 12%; }
+      50% { offset-distance: 64%; }
+      100% { offset-distance: 12%; }
+    }
+    .rider-track {
+      offset-path: path("M 46 220 C 110 200, 150 160, 210 130 C 270 100, 310 120, 360 70 C 400 30, 480 60, 520 40");
+      animation: rider-move 14s infinite ease-in-out;
+    }
+  </style>
+
+  <!-- Required Scripts -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/history@5/umd/history.development.js"></script>
+  <script src="https://unpkg.com/react-router@6.3.0/umd/react-router.development.js"></script>
+  <script src="https://unpkg.com/react-router-dom@6.3.0/umd/react-router-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased font-body-md selection:bg-primary-container selection:text-on-primary-container">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect, createContext, useContext } = React;
+    const { createRoot } = ReactDOM;
+    const { MemoryRouter, Routes, Route, Link, useNavigate, useLocation } = ReactRouterDOM;
+
+    // --- CART & APP CONTEXT ---
+    const CartContext = createContext();
+
+    function CartProvider({ children }) {
+      const [cartItems, setCartItems] = useState({
+        'avocados': { id: 'avocados', name: 'Hass Avocados Imported', desc: 'Fresh & creamy • 300g', price: 179, originalPrice: 220, count: 1, img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBh-yQr41GrTdY5OewlKAZBXD2pWj-6STWJLzs3Tr6zdQ7sDUrWz4-IbfUeLdkCmqcgSI2l6XmPG633cvNrGhLR-8qcPKuRThB2aFwuDFTpxIgrUfHxENO2iZj6hyY8y1MLxmLvc4XQWPjAsDAejue4ryAl7p3-Dr7HI32aa2hzOaOSxjPhDcrNkw5OJXnYgxNUqRHwd09A4CGrcGI86GfxYcMXEL25OR40ueXLGdM' },
+        'yogurt': { id: 'yogurt', name: 'Epigamia Greek Yogurt', desc: 'Alphonso Mango • 120g', price: 60, originalPrice: 70, count: 2, img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC5I7-G47I19-6JruN5hyfa7aibljB7OYoJW9qQYFcztX5SYOGJFHQvcpwyvmPfwS9M3S8m0_R6eTL7OPvaas-KlRwRlN0L_RO8kR6GNQf2pf4qPYYt8pZTM5TXfAzs6xO-gFzfgKoP_Sq_43DXldZEspPkMKmGSu2GiR99eGto03rTE62ZnBXAToY6ocj0ra_AHDyS8raWGAT3aBQTgXvv6JoC3pJCKBfWX2SwoeI' },
+        'bread': { id: 'bread', name: 'Whole Wheat Brown Bread', desc: 'Zero Maida • 400g', price: 45, originalPrice: 50, count: 1, img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCAM_n7BqybdFXC94dZ3neL_SNpLx6hK6YGh1SD7C7aTVyAEsvNPkuslhgYzOXUtVpnHBSvH2H1xO2wLbU2-85WbtoZgtpb_5zRPnkX0_CsnK4dK576uNUu1Qua3ghHlpW44EVAIeJNOh0SKP6woj_MAfod86ho4NL7SwV-Fd_SyliOvgjTDf2toxF-M_d9FZ4VynxeVPxh2NBgvcBe_FwgOhn6P1jy8tainjgPK8c' },
+        'butter': { id: 'butter', name: 'Amul Butter Pasteurized', desc: 'Salted • 100g', price: 40, originalPrice: 40, count: 1, img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDHwL4hYuyekfVbnKPzTtwOJbiqcuPiJMNt3HXNwVgGG7x-uXTkuYIYcR4UDnA8holpRmPYBXuUISlMUl8W1S8OqTwmMX4c256GAqIJTr-lFhugO3r-LRg52nV7oMJPW-0jDy-NLpikTBG7TiCN8kCeWR75e3LirABFZrl2M7QUJYo5riSQJ1FNhFZ-3rLoiO0HeYjjPmrc1k94JPjZCjtbaI20OHBdwgWfN5FGTXc' }
+      });
+
+      const [toastMsg, setToastMsg] = useState('');
+      const [wallet] = useState(150);
+
+      const showToast = (msg) => {
+        setToastMsg(msg);
+        setTimeout(() => setToastMsg(''), 2500);
+      };
+
+      const updateQty = (id, delta, itemDetails = null) => {
+        setCartItems(prev => {
+          const current = prev[id] || (itemDetails ? { ...itemDetails, count: 0 } : null);
+          if (!current) return prev;
+          const nextCount = (current.count || 0) + delta;
+          if (nextCount <= 0) {
+            const copy = { ...prev };
+            delete copy[id];
+            return copy;
+          }
+          return {
+            ...prev,
+            [id]: { ...current, count: nextCount }
+          };
+        });
+      };
+
+      const clearCart = () => setCartItems({});
+
+      const totalItemsCount = Object.values(cartItems).reduce((acc, it) => acc + it.count, 0);
+      const totalAmount = Object.values(cartItems).reduce((acc, it) => acc + (it.price * it.count), 0);
+
+      return (
+        <CartContext.Provider value={{ cartItems, updateQty, clearCart, totalItemsCount, totalAmount, toastMsg, showToast, wallet }}>
+          {children}
+        </CartContext.Provider>
+      );
+    }
+
+    const useCart = () => useContext(CartContext);
+
+    // --- REUSABLE COMPONENTS ---
+
+    // Bottom Navigation Bar
+    function BottomNavBar({ activeTab }) {
+      const navigate = useNavigate();
+      return (
+        <nav aria-label="Main Navigation" className="md:hidden bg-surface-container-lowest/95 dark:bg-inverse-surface/95 backdrop-blur-md fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter-mobile py-space-xs shadow-[0px_-8px_24px_rgba(16,61,44,0.08)]">
+          <button
+            onClick={() => navigate('/')}
+            className={`flex flex-col items-center justify-center px-2 py-1.5 transition-all duration-200 ${
+              activeTab === 'home'
+                ? 'bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary rounded-full px-3 py-1.5 font-bold shadow-xs'
+                : 'text-on-surface-variant hover:text-primary'
+            }`}
+          >
+            <span className="material-symbols-outlined" data-weight={activeTab === 'home' ? 'fill' : 'normal'}>home</span>
+            <span className="text-label-sm font-label-sm">Home</span>
+          </button>
+
+          <button
+            onClick={() => navigate('/snacks')}
+            className={`flex flex-col items-center justify-center px-2 py-1.5 transition-all duration-200 ${
+              activeTab === 'categories'
+                ? 'bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary rounded-full px-3 py-1.5 font-bold shadow-xs'
+                : 'text-on-surface-variant hover:text-primary'
+            }`}
+          >
+            <span className="material-symbols-outlined" data-weight={activeTab === 'categories' ? 'fill' : 'normal'}>category</span>
+            <span className="text-label-sm font-label-sm">Categories</span>
+          </button>
+
+          <button
+            onClick={() => navigate('/search')}
+            className={`flex flex-col items-center justify-center px-2 py-1.5 transition-all duration-200 ${
+              activeTab === 'search'
+                ? 'bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary rounded-full px-3 py-1.5 font-bold shadow-xs'
+                : 'text-on-surface-variant hover:text-primary'
+            }`}
+          >
+            <span className="material-symbols-outlined" data-weight={activeTab === 'search' ? 'fill' : 'normal'}>search</span>
+            <span className="text-label-sm font-label-sm">Search</span>
+          </button>
+
+          <button
+            onClick={() => navigate('/tracking')}
+            className={`relative flex flex-col items-center justify-center px-2 py-1.5 transition-all duration-200 ${
+              activeTab === 'orders'
+                ? 'bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary rounded-full px-3 py-1.5 font-bold shadow-xs'
+                : 'text-on-surface-variant hover:text-primary'
+            }`}
+          >
+            <span className="material-symbols-outlined" data-weight={activeTab === 'orders' ? 'fill' : 'normal'}>receipt_long</span>
+            <span className="text-label-sm font-label-sm">Orders</span>
+            <span className="absolute top-1 right-2 w-2 h-2 rounded-full bg-secondary"></span>
+          </button>
+
+          <button
+            onClick={() => navigate('/account')}
+            className={`flex flex-col items-center justify-center px-2 py-1.5 transition-all duration-200 ${
+              activeTab === 'profile'
+                ? 'bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary rounded-full px-3 py-1.5 font-bold shadow-xs'
+                : 'text-on-surface-variant hover:text-primary'
+            }`}
+          >
+            <span className="material-symbols-outlined" data-weight={activeTab === 'profile' ? 'fill' : 'normal'}>person</span>
+            <span className="text-label-sm font-label-sm">Profile</span>
+          </button>
+        </nav>
+      );
+    }
+
+    // Micro Stepper Component
+    function Stepper({ id, count, onAdd, onRemove }) {
+      if (!count || count <= 0) {
+        return (
+          <button
+            onClick={onAdd}
+            className="bg-surface-container-lowest hover:bg-primary-container text-secondary border border-secondary font-label-md text-label-md px-3 py-1 rounded-full active:scale-95 transition-all flex items-center gap-1 shadow-xs"
+          >
+            <span className="material-symbols-outlined text-[14px]">add</span>
+            ADD
+          </button>
+        );
+      }
+      return (
+        <div className="flex items-center bg-primary text-on-primary rounded-full px-2 py-0.5 shadow-xs">
+          <button
+            onClick={onRemove}
+            className="w-5 h-5 flex items-center justify-center text-on-primary hover:opacity-80 active:scale-90 transition-transform"
+          >
+            <span className="material-symbols-outlined text-[14px]">remove</span>
+          </button>
+          <span className="px-2 text-label-md font-label-md font-bold text-white">{count}</span>
+          <button
+            onClick={onAdd}
+            className="w-5 h-5 flex items-center justify-center text-on-primary hover:opacity-80 active:scale-90 transition-transform"
+          >
+            <span className="material-symbols-outlined text-[14px]">add</span>
+          </button>
+        </div>
+      );
+    }
+
+    // Floating Cart Bar (Bottom Sticky)
+    function StickyCartPill() {
+      const { totalItemsCount, totalAmount } = useCart();
+      const navigate = useNavigate();
+
+      if (totalItemsCount === 0) return null;
+
+      return (
+        <aside className="fixed bottom-16 md:bottom-6 left-1/2 -translate-x-1/2 z-40 w-[92%] max-w-xl">
+          <div className="bg-inverse-surface text-inverse-on-surface rounded-full px-4 py-2.5 shadow-[0px_8px_24px_rgba(16,61,44,0.22)] flex items-center justify-between border border-outline-variant/20 backdrop-blur-md">
+            <div className="flex items-center gap-3">
+              <div className="relative w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface font-bold text-label-md">
+                <span className="material-symbols-outlined text-secondary text-[20px]" data-weight="fill">shopping_basket</span>
+                <span className="absolute -top-1 -right-1 bg-secondary text-on-secondary rounded-full w-4 h-4 text-[10px] flex items-center justify-center font-bold">
+                  {totalItemsCount}
+                </span>
+              </div>
+              <div>
+                <div className="text-label-md font-label-md font-bold text-inverse-on-surface flex items-center gap-1.5">
+                  <span>{totalItemsCount} {totalItemsCount === 1 ? 'item' : 'items'}</span>
+                  <span>•</span>
+                  <span className="text-primary-container font-price-catalog">₹{totalAmount}</span>
+                </div>
+                <p className="text-[11px] text-outline-variant leading-none">Instant 11 mins delivery</p>
+              </div>
+            </div>
+            <button
+              onClick={() => navigate('/cart')}
+              className="bg-secondary text-on-secondary hover:bg-on-secondary-container transition-colors px-4 py-1.5 rounded-full text-label-md font-label-md font-bold flex items-center gap-1.5 shadow-sm active:scale-95"
+            >
+              View Cart
+              <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </button>
+          </div>
+        </aside>
+      );
+    }
+
+    // --- SCREEN 1: HOME PAGE ---
+    function HomeScreen() {
+      const navigate = useNavigate();
+      const { cartItems, updateQty, totalItemsCount, showToast } = useCart();
+      const [categoryModalOpen, setCategoryModalOpen] = useState(false);
+
+      const categoriesData = [
+        { name: 'Fruits & Veggies', icon: 'nutrition', count: '142 items', link: '/product/avocados' },
+        { name: 'Daily Dairy & Bread', icon: 'bakery_dining', count: '98 items', link: '/cart' },
+        { name: 'Munchies & Chips', icon: 'cookie', count: '85 items', link: '/snacks' },
+        { name: 'Cold Pressed Juices', icon: 'local_drink', count: '46 items', link: '/search' },
+        { name: 'Bakery & Artisan', icon: 'breakfast_dining', count: '64 items', link: '/search' },
+        { name: 'Meat & Seafood', icon: 'set_meal', count: '52 items', link: '/search' },
+        { name: 'Gourmet Pantry', icon: 'grocery', count: '120 items', link: '/snacks' },
+        { name: 'Wellness & Organic', icon: 'spa', count: '74 items', link: '/product/avocados' }
+      ];
+
+      return (
+        <div className="min-h-screen bg-background text-on-surface">
+          {/* Top AppBar */}
+          <header className="bg-surface dark:bg-inverse-surface border-b border-outline-variant/30 shadow-sm fixed top-0 left-0 w-full z-40 px-margin-mobile md:px-margin py-space-sm">
+            <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+              <div className="flex items-center gap-3 md:gap-5">
+                <Link className="flex items-center gap-1.5 focus:outline-none" to="/">
+                  <span className="text-headline-md font-headline-md font-extrabold tracking-tight text-primary dark:text-inverse-primary flex items-center">
+                    Wrapit
+                  </span>
+                  <span className="bg-primary-container text-on-primary-fixed-variant px-1.5 py-0.5 rounded-full text-label-sm font-label-sm uppercase tracking-wide flex items-center gap-0.5">
+                    <span className="material-symbols-outlined text-[13px]">eco</span>
+                    Fresh
+                  </span>
+                </Link>
+
+                <button 
+                  onClick={() => showToast('Selected location: Indiranagar')}
+                  className="flex items-center gap-1.5 bg-surface-container-lowest px-2.5 py-1.5 rounded-full border border-outline-variant/40 shadow-xs hover:bg-surface-container transition-colors max-w-[210px] md:max-w-xs text-left"
+                >
+                  <span className="bg-primary-container text-on-secondary-fixed-variant p-1 rounded-full flex items-center justify-center shrink-0">
+                    <span className="material-symbols-outlined text-[16px]" data-weight="fill">bolt</span>
+                  </span>
+                  <div className="truncate">
+                    <div className="flex items-center gap-1">
+                      <span className="text-label-sm font-label-sm bg-primary-container text-on-primary-fixed-variant px-1.5 py-0.2 rounded-full font-bold">11 Mins</span>
+                      <span className="text-label-md font-label-md text-on-surface font-bold">Home</span>
+                    </div>
+                    <p className="text-body-sm font-body-sm text-outline truncate text-[11px] leading-tight">42, 4th Cross, Indiranagar, Bengaluru</p>
+                  </div>
+                  <span className="material-symbols-outlined text-outline text-[16px] shrink-0">keyboard_arrow_down</span>
+                </button>
+              </div>
+
+              {/* Web Nav */}
+              <nav className="hidden md:flex items-center gap-6">
+                <Link to="/snacks" className="text-primary dark:text-inverse-primary font-bold text-label-lg font-label-lg flex items-center gap-1">
+                  <span className="material-symbols-outlined text-[18px]" data-weight="fill">storefront</span>
+                  Catalog
+                </Link>
+                <Link to="/search" className="text-on-surface-variant hover:text-primary transition-colors text-label-lg font-label-lg flex items-center gap-1">
+                  <span className="material-symbols-outlined text-[18px]">local_fire_department</span>
+                  Blink Deals
+                </Link>
+                <Link to="/tracking" className="text-on-surface-variant hover:text-primary transition-colors text-label-lg font-label-lg flex items-center gap-1">
+                  <span className="material-symbols-outlined text-[18px]">receipt_long</span>
+                  My Orders
+                </Link>
+              </nav>
+
+              <div className="flex items-center gap-2 md:gap-3">
+                <div className="flex items-center gap-1.5 bg-surface-container px-2.5 py-1 rounded-full border border-outline-variant/30">
+                  <span className="material-symbols-outlined text-secondary text-[16px]" data-weight="fill">account_balance_wallet</span>
+                  <span className="text-label-md font-label-md text-on-surface">₹150</span>
+                </div>
+                <button
+                  onClick={() => navigate('/cart')}
+                  aria-label="Cart"
+                  className="relative p-2 rounded-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface hover:bg-surface-container transition-colors"
+                >
+                  <span className="material-symbols-outlined text-[20px]">shopping_bag</span>
+                  {totalItemsCount > 0 && (
+                    <span className="absolute -top-1 -right-1 bg-secondary text-on-secondary rounded-full w-4 h-4 text-[10px] flex items-center justify-center font-bold">
+                      {totalItemsCount}
+                    </span>
+                  )}
+                </button>
+                <button
+                  onClick={() => navigate('/account')}
+                  className="w-8 h-8 rounded-full overflow-hidden border border-outline-variant/40 shrink-0 focus:outline-none focus:ring-2 focus:ring-primary"
+                >
+                  <img
+                    className="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGoTSTbaUW69NO-C3U7y0r67qQjaa8pPqL7NjMVcJScjmwCFHD2908u6BSkMYDRC8VFuSF6giuIIbojDI61P9M7CnauhZkA4uCspecXsY8uB_hbp_6UHzgdGcWKPTKgWWgjxe066TB1EABfhg0DY3EakQzl7XQ4Wsz-OEH-Wu0WmYPqYgDh_0Os6xGP3nPlqIl66yYKZDSXV_MDjE37zE2Pw9NeqdNozDyCTyorBQ"
+                    alt="User"
+                  />
+                </button>
+              </div>
+            </div>
+          </header>
+
+          {/* Main Content */}
+          <main className="pt-20 md:pt-24 pb-32 px-margin-mobile md:px-margin max-w-7xl mx-auto space-y-6">
+            {/* Search Bar */}
+            <div className="w-full cursor-pointer" onClick={() => navigate('/search')}>
+              <div className="relative flex items-center bg-surface-container-lowest rounded-full border border-outline-variant/50 shadow-xs px-4 py-2.5 hover:border-secondary transition-all">
+                <span className="material-symbols-outlined text-outline mr-2.5 text-[22px]">search</span>
+                <input
+                  readOnly
+                  className="w-full bg-transparent border-0 p-0 text-body-md font-body-md text-on-surface placeholder:text-outline focus:ring-0 focus:outline-none cursor-pointer"
+                  placeholder="Search 'fresh avocados, A2 milk, sourdough...'"
+                />
+                <div className="flex items-center gap-1 pl-2 border-l border-outline-variant/40">
+                  <span className="material-symbols-outlined text-[20px] text-outline">mic</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Hero Banner Card */}
+            <section className="relative overflow-hidden rounded-lg bg-gradient-to-r from-tertiary-container via-surface-container-lowest to-primary-container p-5 md:p-8 border border-outline-variant/30 shadow-xs">
+              <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                <div className="max-w-xl space-y-2">
+                  <div className="inline-flex items-center gap-1.5 bg-primary-container text-on-secondary-fixed-variant px-3 py-1 rounded-full font-label-sm text-label-sm font-bold tracking-wide">
+                    <span className="material-symbols-outlined text-[15px]" data-weight="fill">timer</span>
+                    Farm to Door in Minutes
+                  </div>
+                  <h1 className="text-headline-lg-mobile md:text-headline-lg font-display-hero text-on-surface tracking-tight leading-tight">
+                    Fresh Harvest Week: Organic Alphonso & Berries at Flat 30% OFF
+                  </h1>
+                  <p className="text-body-md font-body-md text-on-surface-variant max-w-md">
+                    Hand-plucked daily from certified organic groves in Ratnagiri and Nilgiris. Guaranteed peak sweetness or free replacement.
+                  </p>
+                  <div className="pt-2">
+                    <button
+                      onClick={() => navigate('/product/avocados')}
+                      className="bg-primary text-on-primary hover:bg-surface-tint active:scale-95 transition-all px-5 py-2.5 rounded-full font-label-lg text-label-lg font-bold shadow-md shadow-primary/20 flex items-center gap-2"
+                    >
+                      Shop Fresh
+                      <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </button>
+                  </div>
+                </div>
+                <div 
+                  onClick={() => navigate('/product/avocados')}
+                  className="w-full md:w-72 h-44 md:h-52 rounded-DEFAULT overflow-hidden shadow-sm border border-surface-container-highest/60 bg-surface-container-lowest shrink-0 cursor-pointer"
+                >
+                  <img
+                    className="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwF6aeMgdCcVaE3adeOB6qMgSUXZ4hODvcgaISWe6PCXG5sIqoVzO08Scn5o3rQp-51accYqIc0sfr3W6nNrFtnzmSxees5UnZTkYBjLYlRCKhfynh8gIJKqVw4iBAWzwEH3HZ1pdn5WBh_Bf3L_-qtbFpmoIR6J3Yr8e5_Ncn-oHi9O7e02wBQPc4slxPbj-Nnhmirfo4Z_kUIpxf7aFIkfOXRbyQqsIr8n9h5G0"
+                    alt="Alphonso Mango"
+                  />
+                </div>
+              </div>
+            </section>
+
+            {/* Category Quick Grid */}
+            <section className="space-y-3">
+              <div className="flex items-center justify-between">
+                <h2 className="text-title-md font-title-md text-on-surface font-bold tracking-tight">Explore Fresh Categories</h2>
+                <button
+                  onClick={() => setCategoryModalOpen(true)}
+                  className="text-label-md font-label-md text-secondary hover:underline flex items-center gap-0.5"
+                >
+                  See All <span className="material-symbols-outlined text-[16px]">chevron_right</span>
+                </button>
+              </div>
+              <div className="grid grid-cols-4 md:grid-cols-8 gap-3 md:gap-4">
+                {categoriesData.map((cat, idx) => (
+                  <div
+                    key={idx}
+                    onClick={() => navigate(cat.link)}
+                    className="flex flex-col items-center group cursor-pointer"
+                  >
+                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-primary-container/60 border border-primary-container flex items-center justify-center p-1.5 transition-transform group-hover:scale-105 shadow-xs">
+                      <span className="material-symbols-outlined text-2xl text-secondary">{cat.icon}</span>
+                    </div>
+                    <span className="mt-1.5 text-center text-label-sm font-label-sm text-on-surface font-semibold leading-tight line-clamp-2">
+                      {cat.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Popular Near You */}
+            <section className="space-y-3">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <div className="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></div>
+                  <h2 className="text-title-md font-title-md text-on-surface font-bold">Popular Near You</h2>
+                  <span className="bg-primary-container text-on-secondary-fixed-variant px-2 py-0.5 rounded-full text-label-sm font-label-sm font-bold">⚡ Under 15 Mins</span>
+                </div>
+                <Link to="/snacks" className="text-label-md font-label-md text-secondary hover:underline">View All</Link>
+              </div>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+                {/* 1: Milk */}
+                <article className="bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30 p-3 flex flex-col justify-between shadow-xs">
+                  <div>
+                    <div className="relative w-full aspect-square rounded-DEFAULT overflow-hidden bg-surface-container-low mb-2.5">
+                      <span className="absolute top-2 left-2 z-10 bg-primary-container text-on-secondary-fixed-variant text-[10px] font-label-sm px-1.5 py-0.5 rounded-full font-bold flex items-center gap-0.5">
+                        <span className="material-symbols-outlined text-[12px]">bolt</span> 9m
+                      </span>
+                      <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBna9Pauuk14yTUs9xsLNLzNKv6hA4w4ImGnR5blu6CmCMOXP40E1FA10y5a8TZOKxiqmFa8ZpcXnWma2kdb85nzbpZtqsd3QEa7bgRqKjBgPTsrxtbm8lDa0Ob0m1MJqDUq9tHEkHb4Vm4xx1YUGaMwm7K1_H6i7LOK9mnp432Zk_mg6S5BqTLZiWRWbvZdE85OtLRWHeOzrF1VVx9sKlTho5x2fyEi1_LTla1S3g" alt="Amul Taaza Milk" />
+                    </div>
+                    <p className="text-body-sm font-body-sm text-outline font-medium">500 ml</p>
+                    <h3 className="text-body-md font-body-md font-bold text-on-surface line-clamp-1 mt-0.5">Amul Taaza Fresh Toned Milk</h3>
+                  </div>
+                  <div className="mt-3 flex items-center justify-between pt-2 border-t border-outline-variant/20">
+                    <span className="text-price-catalog font-price-catalog text-on-surface">₹28</span>
+                    <Stepper
+                      id="amul-milk"
+                      count={cartItems['amul-milk']?.count || 0}
+                      onAdd={() => updateQty('amul-milk', 1, { id: 'amul-milk', name: 'Amul Taaza Milk', price: 28 })}
+                      onRemove={() => updateQty('amul-milk', -1)}
+                    />
+                  </div>
+                </article>
+
+                {/* 2: Avocados (Links to Product Details) */}
+                <article className="bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30 p-3 flex flex-col justify-between shadow-xs">
+                  <div onClick={() => navigate('/product/avocados')} className="cursor-pointer">
+                    <div className="relative w-full aspect-square rounded-DEFAULT overflow-hidden bg-surface-container-low mb-2.5">
+                      <span className="absolute top-2 left-2 z-10 bg-primary-container text-on-secondary-fixed-variant text-[10px] font-label-sm px-1.5 py-0.5 rounded-full font-bold flex items-center gap-0.5">
+                        <span className="material-symbols-outlined text-[12px]">bolt</span> 11m
+                      </span>
+                      <span className="absolute bottom-2 left-2 z-10 bg-secondary text-on-secondary text-[10px] font-label-sm px-1.5 py-0.5 rounded-full font-bold">18% OFF</span>
+                      <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBh-yQr41GrTdY5OewlKAZBXD2pWj-6STWJLzs3Tr6zdQ7sDUrWz4-IbfUeLdkCmqcgSI2l6XmPG633cvNrGhLR-8qcPKuRThB2aFwuDFTpxIgrUfHxENO2iZj6hyY8y1MLxmLvc4XQWPjAsDAejue4ryAl7p3-Dr7HI32aa2hzOaOSxjPhDcrNkw5OJXnYgxNUqRHwd09A4CGrcGI86GfxYcMXEL25OR40ueXLGdM" alt="Hass Avocados" />
+                    </div>
+                    <p className="text-body-sm font-body-sm text-outline font-medium">2 pcs</p>
+                    <h3 className="text-body-md font-body-md font-bold text-on-surface line-clamp-1 mt-0.5">Hass Avocados Imported</h3>
+                  </div>
+                  <div className="mt-3 flex items-center justify-between pt-2 border-t border-outline-variant/20">
+                    <div className="flex flex-col">
+                      <span className="text-price-catalog font-price-catalog text-on-surface">₹179</span>
+                      <span className="text-body-sm font-body-sm text-outline line-through text-[11px]">₹220</span>
+                    </div>
+                    <Stepper
+                      id="avocados"
+                      count={cartItems['avocados']?.count || 0}
+                      onAdd={() => updateQty('avocados', 1, { id: 'avocados', name: 'Hass Avocados Imported', price: 179 })}
+                      onRemove={() => updateQty('avocados', -1)}
+                    />
+                  </div>
+                </article>
+
+                {/* 3: Eggs */}
+                <article className="bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30 p-3 flex flex-col justify-between shadow-xs">
+                  <div>
+                    <div className="relative w-full aspect-square rounded-DEFAULT overflow-hidden bg-surface-container-low mb-2.5">
+                      <span className="absolute top-2 left-2 z-10 bg-primary-container text-on-secondary-fixed-variant text-[10px] font-label-sm px-1.5 py-0.5 rounded-full font-bold flex items-center gap-0.5">
+                        <span className="material-symbols-outlined text-[12px]">bolt</span> 12m
+                      </span>
+                      <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqIHJuxj5RK8DcyE7VSTRMUyr3L78YmQpINd1roICvQBgfDoOUFfAasz3B7ygTuoA9-WgY5YA6kKdj6vX-urU_Wk8dhTGziKL15E9-ydgAo4s3WEM4YIhfzfkY_NvqxSi881GJtIwas3ISlkvKaMNtIDM2kktsnOPlaFXz4mNDwSq-5VNEDu11USC1FNY_VOn0CVYkX3IC-ec-zFgf3lYRGfpaEl4DcRTiDFUTm1M" alt="Country Whole Eggs" />
+                    </div>
+                    <p className="text-body-sm font-body-sm text-outline font-medium">Pack of 6</p>
+                    <h3 className="text-body-md font-body-md font-bold text-on-surface line-clamp-1 mt-0.5">Country Whole Eggs (Grade A)</h3>
+                  </div>
+                  <div className="mt-3 flex items-center justify-between pt-2 border-t border-outline-variant/20">
+                    <span className="text-price-catalog font-price-catalog text-on-surface">₹64</span>
+                    <Stepper
+                      id="country-eggs"
+                      count={cartItems['country-eggs']?.count || 0}
+                      onAdd={() => updateQty('country-eggs', 1, { id: 'country-eggs', name: 'Country Whole Eggs', price: 64 })}
+                      onRemove={() => updateQty('country-eggs', -1)}
+                    />
+                  </div>
+                </article>
+
+                {/* 4: Sourdough Loaf */}
+                <article className="bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30 p-3 flex flex-col justify-between shadow-xs">
+                  <div>
+                    <div className="relative w-full aspect-square rounded-DEFAULT overflow-hidden bg-surface-container-low mb-2.5">
+                      <span className="absolute top-2 left-2 z-10 bg-primary-container text-on-secondary-fixed-variant text-[10px] font-label-sm px-1.5 py-0.5 rounded-full font-bold flex items-center gap-0.5">
+                        <span className="material-symbols-outlined text-[12px]">bolt</span> 14m
+                      </span>
+                      <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXcQ26sN5p10Mcu1wG_B143JoP3gq3PJjfXIyJpfdxWYqyWbRJuD2V-q_GAf6H1TXA8pQ_NANqd4aVnOPSna6u645csZ6uwLOQfaXSe9iifT2soevwNA43NgJqgioqDNM3wrkCOpK5tW6D3dl967qN4Qt-_hi9EDjzWBlC-f3SbW-FMgLKX11w5RDvGd3SmKr2N3tV-HFJ2KhfcANsTwBFexmQMbghMDjTwHlbh1Q" alt="Sourdough Loaf" />
+                    </div>
+                    <p className="text-body-sm font-body-sm text-outline font-medium">400 g</p>
+                    <h3 className="text-body-md font-body-md font-bold text-on-surface line-clamp-1 mt-0.5">Sourdough Artisan Loaf</h3>
+                  </div>
+                  <div className="mt-3 flex items-center justify-between pt-2 border-t border-outline-variant/20">
+                    <span className="text-price-catalog font-price-catalog text-on-surface">₹95</span>
+                    <Stepper
+                      id="sourdough"
+                      count={cartItems['sourdough']?.count || 0}
+                      onAdd={() => updateQty('sourdough', 1, { id: 'sourdough', name: 'Sourdough Artisan Loaf', price: 95 })}
+                      onRemove={() => updateQty('sourdough', -1)}
+                    />
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            {/* Breakfast Bento Box */}
+            <section className="space-y-3">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h2 className="text-title-md font-title-md text-on-surface font-bold">Morning Breakfast Essentials</h2>
+                  <p className="text-body-sm font-body-sm text-outline">Wake up to warm bakes, artisanal spreads, and pure nut milks</p>
+                </div>
+                <span className="bg-tertiary-container text-on-tertiary-fixed-variant text-label-sm font-label-sm font-bold px-2 py-1 rounded-full">
+                  Fresh Batch Ready
+                </span>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="md:col-span-1 bg-gradient-to-br from-tertiary-container/40 via-surface-container-lowest to-surface-container rounded-DEFAULT p-4 border border-outline-variant/30 flex flex-col justify-between">
+                  <div className="space-y-2">
+                    <span className="text-label-sm font-label-sm bg-secondary text-on-secondary px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Curated Combo</span>
+                    <h3 className="text-headline-sm font-headline-sm text-on-surface">The European Breakfast Box</h3>
+                    <p className="text-body-sm font-body-sm text-on-surface-variant">Includes 2 Butter Croissants, 1 French Salted Butter (100g), and Wild Raspberry Jam.</p>
+                  </div>
+                  <div className="my-4 h-32 rounded-DEFAULT overflow-hidden bg-surface-container-lowest">
+                    <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnoROX0WV2m07RDkhvUTwod6djxCNRrag3c0CGnNnqYQfpq2BvqgFSAQ5Gup258GSN_eUP7wVvrjTJQURd5GTq4L0xHbd31esdkKLPFS3HtuqIgzFKTp_gZwoNl0cQbhobzEkeTcEvqI8puD6Sb41ATRRLW0q9eLtsiklKuolA8rSr9d8x6V5cBXfaqhSiFIYImnw0LSkp5aTt3beeq9fFMkNaGaRPt3o6Mr-kmTs" alt="Combo" />
+                  </div>
+                  <div className="flex items-center justify-between pt-2">
+                    <div>
+                      <span className="text-headline-sm font-headline-sm text-primary font-bold">₹349</span>
+                      <span className="text-body-sm font-body-sm text-outline line-through ml-1">₹420</span>
+                    </div>
+                    <button
+                      onClick={() => {
+                        updateQty('euro-box', 1, { id: 'euro-box', name: 'The European Breakfast Box', price: 349 });
+                        showToast('Added European Breakfast Box to Cart!');
+                      }}
+                      className="bg-primary hover:bg-surface-tint text-on-primary px-4 py-1.5 rounded-full font-label-md text-label-md font-bold active:scale-95 transition-all shadow-sm"
+                    >
+                      Add Combo
+                    </button>
+                  </div>
+                </div>
+
+                <div className="md:col-span-2 grid grid-cols-2 gap-3 md:gap-4">
+                  {/* Greek Yogurt */}
+                  <article className="bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30 p-3 flex flex-col justify-between shadow-xs">
+                    <div>
+                      <div className="relative w-full aspect-square rounded-DEFAULT overflow-hidden bg-surface-container-low mb-2">
+                        <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpqYqZbEFwQa5cIjtpCYzkD26V2bUOzzNgQo3zUN-R4SfQ4qUaiIFkFCv--Qwam1ahiUGF_iifdagLV8C4yFcJXNVaFqVs4bTCVHv96Hi25oie7nsIlD_6LA9T5n6xfUcwfC7hmOvMqWBYxDM7qotMVwhcT25pVXYih8E2YgXbHLHXcTBRfPnQCrFS3YHH1bYwVD25lDW0NhgtE_S0txwHnVp4k_ELFHbOWRC8DMY" alt="Greek Yogurt" />
+                      </div>
+                      <p className="text-body-sm font-body-sm text-outline">Epigamia • 200g</p>
+                      <h4 className="text-body-md font-body-md font-bold text-on-surface line-clamp-1">Natural Greek Yogurt High Protein</h4>
+                    </div>
+                    <div className="mt-3 flex items-center justify-between pt-2 border-t border-outline-variant/20">
+                      <span className="text-price-catalog font-price-catalog text-on-surface">₹70</span>
+                      <Stepper
+                        id="greek-natural"
+                        count={cartItems['greek-natural']?.count || 0}
+                        onAdd={() => updateQty('greek-natural', 1, { id: 'greek-natural', name: 'Epigamia Natural Greek Yogurt', price: 70 })}
+                        onRemove={() => updateQty('greek-natural', -1)}
+                      />
+                    </div>
+                  </article>
+
+                  {/* Cold Brew Concentrate */}
+                  <article className="bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30 p-3 flex flex-col justify-between shadow-xs">
+                    <div>
+                      <div className="relative w-full aspect-square rounded-DEFAULT overflow-hidden bg-surface-container-low mb-2">
+                        <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPLNkmdzngPkl_kiH0hA3IbgspQkL-g0HTBq22VvvPe7ZeINe91zhmBcpJkt95eRS6dNRQ94RrasIjKQIw0C0YOR8SCcXNFUoMHogXQkxREy8UQhNSQ9Xue406ZvlsgXvP0kPpTmh25-xXI_QtaPGEXjzm92QLm6qvP4CD0sF0Go3nWBC4I8Lu69t67qr5IDztBTyOa6J3vrPPdncKw8fzMOsA0Gydk2oBsCM9T3o" alt="Cold Brew" />
+                      </div>
+                      <p className="text-body-sm font-body-sm text-outline">Blue Tokai • 500ml</p>
+                      <h4 className="text-body-md font-body-md font-bold text-on-surface line-clamp-1">Classic Cold Brew Concentrate</h4>
+                    </div>
+                    <div className="mt-3 flex items-center justify-between pt-2 border-t border-outline-variant/20">
+                      <div>
+                        <span className="text-price-catalog font-price-catalog text-on-surface">₹260</span>
+                        <span className="text-body-sm font-body-sm text-outline line-through text-[11px] ml-1">₹290</span>
+                      </div>
+                      <Stepper
+                        id="blue-tokai"
+                        count={cartItems['blue-tokai']?.count || 0}
+                        onAdd={() => updateQty('blue-tokai', 1, { id: 'blue-tokai', name: 'Blue Tokai Cold Brew', price: 260 })}
+                        onRemove={() => updateQty('blue-tokai', -1)}
+                      />
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </section>
+          </main>
+
+          {/* Category Modal */}
+          {categoryModalOpen && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+              <div className="bg-surface-container-lowest rounded-lg max-w-md w-full p-5 space-y-4 shadow-xl border border-outline-variant/30">
+                <div className="flex items-center justify-between pb-2 border-b border-outline-variant/20">
+                  <h3 className="text-headline-sm font-headline-sm text-on-surface">Browse All Categories</h3>
+                  <button onClick={() => setCategoryModalOpen(false)} className="p-1 rounded-full text-outline hover:text-on-surface">
+                    <span className="material-symbols-outlined text-xl">close</span>
+                  </button>
+                </div>
+                <div className="grid grid-cols-2 gap-2 max-h-96 overflow-y-auto pr-1">
+                  {categoriesData.map((cat, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => {
+                        setCategoryModalOpen(false);
+                        navigate(cat.link);
+                      }}
+                      className="flex items-center gap-2.5 p-2 rounded-lg bg-surface-container-low hover:bg-primary-container/40 text-left transition-colors"
+                    >
+                      <div className="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center shrink-0">
+                        <span className="material-symbols-outlined text-secondary text-[18px]">{cat.icon}</span>
+                      </div>
+                      <div>
+                        <p className="text-label-md font-bold text-on-surface leading-tight text-xs">{cat.name}</p>
+                        <p className="text-body-sm text-outline text-[10px]">{cat.count}</p>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
+          <StickyCartPill />
+          <BottomNavBar activeTab="home" />
+        </div>
+      );
+    }
+
+    // --- SCREEN 2: CART & INSTANT CHECKOUT ---
+    function CartScreen() {
+      const navigate = useNavigate();
+      const { cartItems, updateQty, clearCart, totalAmount, showToast } = useCart();
+      const [tip, setTip] = useState(30);
+      const [couponApplied, setCouponApplied] = useState(true);
+      const [isOrdered, setIsOrdered] = useState(false);
+      const [sliderX, setSliderX] = useState(6);
+      const [instruction, setInstruction] = useState('No-contact delivery');
+
+      const itemsList = Object.values(cartItems);
+      const discount = couponApplied ? 40 : 0;
+      const deliveryFee = 0;
+      const packagingFee = 4;
+      const grandTotal = Math.max(0, totalAmount + tip + packagingFee - discount);
+
+      const triggerOrder = () => {
+        setIsOrdered(true);
+        showToast('Order confirmed! Tracking dispatch...');
+        setTimeout(() => {
+          navigate('/tracking');
+        }, 1200);
+      };
+
+      return (
+        <div className="bg-background text-on-surface min-h-screen pb-36 selection:bg-primary-container">
+          <header className="fixed top-0 left-0 w-full z-40 bg-surface dark:bg-inverse-surface shadow-sm">
+            <div className="max-w-7xl mx-auto flex justify-between items-center px-margin-mobile py-space-sm md:px-margin">
+              <div className="flex items-center gap-space-sm">
+                <button
+                  onClick={() => navigate(-1)}
+                  aria-label="Go back"
+                  className="p-space-xs rounded-full hover:bg-surface-container active:scale-95 transition-transform flex items-center justify-center text-primary"
+                >
+                  <span className="material-symbols-outlined">arrow_back</span>
+                </button>
+                <span className="text-headline-md font-headline-md font-extrabold tracking-tight text-primary">Wrapit</span>
+              </div>
+              <div className="flex items-center gap-space-xs bg-primary-container text-on-primary-container px-3 py-1 rounded-full shadow-xs">
+                <span className="material-symbols-outlined text-[16px]" data-weight="fill">location_on</span>
+                <span className="font-label-sm text-label-sm">Home • 12 mins</span>
+              </div>
+            </div>
+          </header>
+
+          <main className="max-w-3xl mx-auto pt-20 px-margin-mobile md:px-gutter space-y-space-md">
+            {/* Header context */}
+            <section className="bg-surface-container-lowest rounded-DEFAULT p-space-md border border-outline-variant/30 shadow-xs">
+              <div className="flex items-start justify-between">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <h1 className="text-headline-sm md:text-headline-md font-headline-sm text-on-surface">
+                      My Cart ({itemsList.length} Items)
+                    </h1>
+                    <span className="bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm px-2.5 py-0.5 rounded-full">Express</span>
+                  </div>
+                  <p className="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-1.5">
+                    <span className="material-symbols-outlined text-[16px] text-secondary" data-weight="fill">bolt</span>
+                    <span>Delivering to Home • <strong>12 mins</strong></span>
+                  </p>
+                </div>
+                <span className="font-label-sm text-label-sm text-secondary bg-secondary-fixed/30 px-2 py-1 rounded-full font-bold">100% Fresh</span>
+              </div>
+              <div className="mt-space-sm pt-space-xs">
+                <div className="flex justify-between items-center mb-1 font-label-sm text-label-sm text-tertiary">
+                  <span className="flex items-center gap-1">
+                    <span className="material-symbols-outlined text-[14px]" data-weight="fill">check_circle</span>
+                    Free delivery unlocked!
+                  </span>
+                  <span className="text-primary font-bold">Saved ₹35</span>
+                </div>
+                <div className="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+                  <div className="bg-secondary h-full rounded-full w-full"></div>
+                </div>
+              </div>
+            </section>
+
+            {/* Cart Items List */}
+            <section className="bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30 p-space-md shadow-xs space-y-space-md">
+              <div className="flex items-center justify-between pb-space-xs border-b border-outline-variant/20">
+                <span className="font-label-md text-label-md text-on-surface-variant">Items in Bag</span>
+                <button onClick={clearCart} className="font-label-sm text-label-sm text-primary hover:underline">Clear all</button>
+              </div>
+
+              {itemsList.length === 0 ? (
+                <div className="py-8 text-center space-y-3">
+                  <span className="material-symbols-outlined text-4xl text-outline">shopping_bag</span>
+                  <p className="text-on-surface font-bold">Your cart is empty</p>
+                  <button onClick={() => navigate('/snacks')} className="px-4 py-2 bg-primary text-on-primary rounded-full text-label-md font-bold">
+                    Start Shopping
+                  </button>
+                </div>
+              ) : (
+                itemsList.map(item => (
+                  <article key={item.id} className="flex items-center gap-3 md:gap-4 group">
+                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-DEFAULT bg-surface-container-low border border-outline-variant/30 overflow-hidden shrink-0 flex items-center justify-center relative">
+                      <img className="w-full h-full object-cover" src={item.img || "https://lh3.googleusercontent.com/aida-public/AB6AXuCL8cJLNlKoZfM1ZpnR5FzXiYOvisLl2hlHiENpbogaDTf3vYwwIpfTYsIoemsxrMDsPO8lcoug3qkrdS_93vw6gUiU-71E8lu4Z-jUiysTf3WAIxy1oidXmFaDYKvTvbb5atQhv46XvIsh726rL_lHrt1coLCZm_mxbY0s-Eou9jgFvkeW6Dkrf1g89RGVYQNme6z3zejOhBsWjYPiTFDCnfh4X9P2sXYRS3X_GIQ"} alt={item.name} />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h2 className="font-title-md text-title-md text-on-surface truncate">{item.name}</h2>
+                      <p className="font-body-sm text-body-sm text-on-surface-variant">{item.desc || 'Fresh guaranteed'}</p>
+                      <div className="flex items-baseline gap-2 mt-1">
+                        <span className="font-price-catalog text-price-catalog text-on-surface">₹{item.price * item.count}</span>
+                        {item.originalPrice && (
+                          <span className="font-body-sm text-body-sm text-outline line-through">₹{item.originalPrice * item.count}</span>
+                        )}
+                      </div>
+                    </div>
+                    <div className="shrink-0 flex items-center bg-inverse-surface text-on-primary rounded-full px-1.5 py-1 shadow-sm gap-2">
+                      <button onClick={() => updateQty(item.id, -1)} className="w-6 h-6 rounded-full flex items-center justify-center hover:bg-white/10">
+                        <span className="material-symbols-outlined text-[16px]">remove</span>
+                      </button>
+                      <span className="font-title-md text-title-md text-white px-1">{item.count}</span>
+                      <button onClick={() => updateQty(item.id, 1)} className="w-6 h-6 rounded-full flex items-center justify-center hover:bg-white/10">
+                        <span className="material-symbols-outlined text-[16px]">add</span>
+                      </button>
+                    </div>
+                  </article>
+                ))
+              )}
+            </section>
+
+            {/* Coupon Card */}
+            <section className="bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30 p-space-md shadow-xs">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+                    <span className="material-symbols-outlined text-[20px]" data-weight="fill">confirmation_number</span>
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <span className="font-headline-sm text-headline-sm text-on-surface tracking-wide">WRAPITFIRST</span>
+                      <span className="bg-secondary-fixed/50 text-on-secondary-fixed-variant text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">
+                        {couponApplied ? 'Applied' : 'Removed'}
+                      </span>
+                    </div>
+                    <p className="font-body-sm text-body-sm text-secondary font-medium">₹40 instant checkout coupon unlocked</p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setCouponApplied(!couponApplied)}
+                  className={`font-label-md text-label-md px-2 py-1 ${couponApplied ? 'text-error' : 'text-secondary'}`}
+                >
+                  {couponApplied ? 'Remove' : 'Apply'}
+                </button>
+              </div>
+            </section>
+
+            {/* Delivery Instructions */}
+            <section className="bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30 p-space-md shadow-xs space-y-space-md">
+              <div>
+                <h3 className="font-label-md text-label-md text-on-surface mb-2.5 flex items-center gap-1.5">
+                  <span className="material-symbols-outlined text-[18px] text-tertiary">directions_bike</span>
+                  Delivery Instructions
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {['No-contact delivery', 'Leave at door', 'Pet friendly'].map(opt => (
+                    <button
+                      key={opt}
+                      onClick={() => setInstruction(opt)}
+                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-md text-label-md transition-all ${
+                        instruction === opt
+                          ? 'bg-primary-container text-on-primary-container border border-primary/20 shadow-xs'
+                          : 'bg-surface-container-low text-on-surface-variant border border-transparent'
+                      }`}
+                    >
+                      {instruction === opt && <span className="material-symbols-outlined text-[16px]" data-weight="fill">check_circle</span>}
+                      <span>{opt}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Partner Tip */}
+              <div className="pt-2 border-t border-outline-variant/20">
+                <div className="flex items-center justify-between mb-2">
+                  <div>
+                    <h3 className="font-label-md text-label-md text-on-surface">Delivery Partner Tip</h3>
+                    <p className="font-body-sm text-body-sm text-on-surface-variant">100% of tips go directly to your rider</p>
+                  </div>
+                  <span className="font-label-sm text-label-sm text-secondary font-bold">Selected: ₹{tip}</span>
+                </div>
+                <div className="grid grid-cols-4 gap-2">
+                  {[20, 30, 50, 0].map((t) => (
+                    <button
+                      key={t}
+                      onClick={() => setTip(t)}
+                      className={`py-2 rounded-full font-title-md text-title-md transition-all ${
+                        tip === t
+                          ? 'bg-inverse-surface text-white shadow-md ring-2 ring-inverse-surface'
+                          : 'border border-outline-variant/40 text-on-surface hover:border-primary'
+                      }`}
+                    >
+                      {t === 0 ? 'No tip' : `₹${t}`}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* Bill Details */}
+            <section className="bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30 p-space-md shadow-xs space-y-space-sm">
+              <h3 className="font-title-md text-title-md text-on-surface pb-1">Bill Details</h3>
+              <div className="space-y-2 font-body-md text-body-md text-on-surface-variant">
+                <div className="flex justify-between items-center">
+                  <span>Item Subtotal</span>
+                  <span className="text-on-surface font-medium">₹{totalAmount}</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="flex items-center gap-1">
+                    <span>Delivery Fee</span>
+                    <span className="text-[10px] font-bold bg-primary-container text-on-primary-container px-1.5 py-0.2 rounded">FREE</span>
+                  </span>
+                  <span className="text-secondary font-bold">₹0</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span>Handling & Packaging</span>
+                  <span className="text-on-surface">₹{packagingFee}</span>
+                </div>
+                {tip > 0 && (
+                  <div className="flex justify-between items-center">
+                    <span>Rider Tip</span>
+                    <span className="text-on-surface">₹{tip}</span>
+                  </div>
+                )}
+                {couponApplied && (
+                  <div className="flex justify-between items-center text-primary font-medium">
+                    <span>First Order Voucher</span>
+                    <span className="font-bold">-₹{discount}</span>
+                  </div>
+                )}
+              </div>
+              <div className="pt-3 border-t border-outline-variant/30 flex justify-between items-baseline">
+                <div>
+                  <span className="font-title-md text-title-md text-on-surface font-bold">Total Bill</span>
+                  <p className="font-label-sm text-label-sm text-secondary font-bold">You saved ₹65 on this order!</p>
+                </div>
+                <span className="text-price-hero font-price-hero text-on-surface">₹{grandTotal}</span>
+              </div>
+            </section>
+          </main>
+
+          {/* Sticky Checkout Bar */}
+          <div className="fixed bottom-0 left-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-md p-space-sm md:p-space-md shadow-[0px_-8px_32px_rgba(16,61,44,0.16)]">
+            <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-3">
+              <div className="flex items-center justify-between w-full md:w-auto md:min-w-[160px] px-2 md:px-0">
+                <div>
+                  <span className="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">To Pay</span>
+                  <div className="flex items-baseline gap-1.5">
+                    <span className="text-price-hero font-price-hero text-inverse-surface font-extrabold">₹{grandTotal}</span>
+                    <span className="font-body-sm text-body-sm text-secondary font-bold">Saved ₹65</span>
+                  </div>
+                </div>
+                <div className="text-right md:hidden">
+                  <span className="bg-primary-container text-on-primary-container text-label-sm font-label-sm px-2.5 py-1 rounded-full font-bold">12 Mins</span>
+                </div>
+              </div>
+
+              {/* Slider Button */}
+              <div
+                onClick={triggerOrder}
+                className="relative w-full h-14 bg-[#103D2C] rounded-full p-1.5 flex items-center overflow-hidden cursor-pointer select-none shadow-lg"
+              >
+                <div className="w-full text-center pointer-events-none z-10 pr-2 pl-14">
+                  <span className="font-headline-sm text-headline-sm text-white tracking-wide font-bold inline-flex items-center gap-1.5">
+                    {isOrdered ? 'Order Placed! Dispatching...' : 'Slide to Pay or Place Order'}
+                    <span className="material-symbols-outlined text-[18px] text-[#65fdb5] animate-pulse">chevron_right</span>
+                  </span>
+                </div>
+                <div
+                  style={{ left: isOrdered ? 'calc(100% - 48px)' : `${sliderX}px` }}
+                  className="absolute top-1.5 w-11 h-11 rounded-full bg-[#16C784] text-[#103D2C] flex items-center justify-center font-bold shadow-md transition-all duration-300 z-20"
+                >
+                  <span className="material-symbols-outlined text-[24px]">
+                    {isOrdered ? 'check' : 'arrow_forward'}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // --- SCREEN 3: SEARCH & AI DISCOVERY ---
+    function SearchScreen() {
+      const navigate = useNavigate();
+      const { updateQty, totalItemsCount, showToast } = useCart();
+      const [searchQuery, setSearchQuery] = useState('breakfast essentials under ₹250');
+      const [filter, setFilter] = useState('All');
+
+      const handleAddSmartBundle = () => {
+        updateQty('farm-eggs', 1, { id: 'farm-eggs', name: 'Farm Fresh Eggs (6 pcs)', price: 64 });
+        updateQty('brown-bread', 1, { id: 'brown-bread', name: 'Artisan Brown Bread', price: 55 });
+        updateQty('a2-milk', 1, { id: 'a2-milk', name: 'Organic A2 Milk', price: 35 });
+        updateQty('bananas', 1, { id: 'bananas', name: 'Robusta Bananas', price: 44 });
+        updateQty('amul-butter', 1, { id: 'amul-butter', name: 'Amul Butter 100g', price: 40 });
+        showToast('5 Curated Morning Items added to cart!');
+      };
+
+      return (
+        <div className="bg-background text-on-surface min-h-screen pb-28">
+          {/* Top Bar */}
+          <header className="sticky top-0 z-40 bg-surface/90 backdrop-blur-md transition-shadow">
+            <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin py-space-sm flex items-center gap-3">
+              <button
+                onClick={() => navigate(-1)}
+                aria-label="Go Back"
+                className="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container-lowest text-on-surface hover:bg-surface-container active:scale-95 transition-transform border border-outline-variant/30 flex-shrink-0"
+              >
+                <span className="material-symbols-outlined">arrow_back</span>
+              </button>
+
+              <div className="relative flex-1 flex items-center bg-surface-container-lowest border-2 border-primary-container rounded-full px-4 py-2 shadow-sm focus-within:border-primary">
+                <span className="material-symbols-outlined text-tertiary mr-2 flex-shrink-0">search</span>
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full bg-transparent border-0 p-0 text-body-md font-body-md text-on-surface font-medium focus:ring-0 focus:outline-none"
+                  placeholder="Ask Wrapit AI or search groceries..."
+                />
+                {searchQuery && (
+                  <button onClick={() => setSearchQuery('')} className="w-6 h-6 rounded-full flex items-center justify-center bg-surface-container-high text-on-surface-variant hover:text-on-surface ml-2">
+                    <span className="material-symbols-outlined text-sm">close</span>
+                  </button>
+                )}
+              </div>
+
+              <button
+                onClick={() => navigate('/cart')}
+                aria-label="Cart"
+                className="relative w-10 h-10 rounded-full flex items-center justify-center bg-surface-container-lowest text-primary hover:bg-surface-container active:scale-95 border border-outline-variant/30 flex-shrink-0"
+              >
+                <span className="material-symbols-outlined">shopping_bag</span>
+                {totalItemsCount > 0 && (
+                  <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm flex items-center justify-center">
+                    {totalItemsCount}
+                  </span>
+                )}
+              </button>
+            </div>
+          </header>
+
+          <main className="max-w-7xl mx-auto px-margin-mobile md:px-margin pt-space-sm space-y-space-lg">
+            {/* Ask Wrapit AI Smart Card */}
+            <section className="relative overflow-hidden rounded-lg bg-surface-container-lowest border-2 border-primary-container shadow-[0px_4px_20px_rgba(16,61,44,0.06)] p-4 md:p-space-lg">
+              <div className="flex items-start justify-between gap-3 mb-space-md">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container flex-shrink-0 shadow-sm">
+                    <span className="material-symbols-outlined text-xl" data-weight="fill">auto_awesome</span>
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <span className="font-headline-sm text-headline-sm text-primary tracking-tight">Ask Wrapit AI</span>
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+                        Smart Combo
+                      </span>
+                    </div>
+                    <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                      Wrapit AI assembled a 2-person breakfast basket within budget (<span className="font-bold text-on-surface">₹238 total</span>):
+                    </p>
+                  </div>
+                </div>
+                <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 bg-surface-container-low rounded-full border border-outline-variant/30">
+                  <span className="material-symbols-outlined text-sm text-secondary">bolt</span>
+                  <span className="font-label-sm text-label-sm text-secondary">Delivery in 10m</span>
+                </div>
+              </div>
+
+              {/* 5 Bundle Items */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5">
+                {[
+                  { name: 'Farm Fresh Eggs', meta: '6 pcs pack', price: '₹64', tag: 'Protein', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuArpA7j4DwUHNYe4ZTsq-k6XotXC71nq_q3kHK6Y-uB7RnE8RwEJNeBnlO6nYvRR5c7XPpib2GtK2WniQYXZebsHdqDfIC76zefVTt5GYiinrV2P04mO18VFsJBoQs0f-gxjVwUtoB6eZWjHFYJotqDZV4gieHkGi0j0Q2OqM1xmG2NPiXRyUHoE-IQEbUOSF0pemiHMlliA_UcfRJs8F2bet76mcKu3F3rQIEuuSE' },
+                  { name: 'Artisan Brown Bread', meta: '400g', price: '₹55', tag: 'Whole Grain', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBK72ZKq6PYQ32QfubL9JsVhjmfdERK5VmZLQ3efhG0p9bMo7Vkw0DRV2gUpEx_DN8S_2_rmyOMEHKYLWUlgAdSn80TGHDlKSNcOu4onV9DB_4NlDusYxN5JrvEZ3GGPmZp21eyBhXsILnvk13UkOwQ4NN_3VcrCQLrT_3PEka0qeHxMBklV1KK11659sGqNAmguWgLr27O6v6pPcaaCBPnOj4_sxXz-ARCo5iQSOs' },
+                  { name: 'Organic A2 Milk', meta: '500ml pouch', price: '₹35', tag: 'Fresh Daily', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCK9TScKiWoHw-qWNyl5NwwWfSOIXXHUeEqupBtTqMYGZfecbKbX-2XxrWy9yTc9CvtxN_m3KsIUB62LVbS9THh3ek9G31iewiL5GeJrECWxMRkvdsAAPCqEsSyPnBeKjXmLejIAfrMG_P6RarF5_BDD-Dw5BLg0y3L_8j2slCJrfzxAv_agqYc-zNTs_59sWnkGyJURIWzvBIKsSXLgo2ul1UBaMHRJ9jBahCVa-8' },
+                  { name: 'Robusta Bananas', meta: '500g bunch', price: '₹44', tag: 'Farm Direct', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBGh8KL67KY7qpktjd0NeNwxhD2j-c-n9-_vbzmeURqLhunY4oZvyZEOWZLrgHnN99gIxFbqF2Q01EMHlYeI3xKRc7q11utJ_iI9JZgUW37LEljX2m6ttaQ2gWwm-kms2UD_m2NKxPNKv9sYEDn2jnzqOPmv2Ta0-SitB5NSq6U4iEmXyqxogjLy4CEfEjS-p8mrsVwi3zWrqlykrRMbldxZNTQLSI6KKUU-FqAD-4' },
+                  { name: 'Amul Butter', meta: '100g pack', price: '₹40', tag: 'Pantry Pick', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCs5m8F7MrR_RfSJ8RI6QQ7s3TiYTKaidqqcjN7wdk6uTELGRpVKAzNElWCLVotGieq1J4nYw1idnal8qzqFZOYM7WvPk7Qs8bTdAMMUnIr9EQg8A2OCZfxfzL03ysHybpj5di3ofRLuuiUS8XIb2alwm0yGvCmmXJFOZz4ds6_CDPGuxcA9ee9xBrY94LlppbTOYulkle8ao22zbqB0y2X02trAwSpMWYg8aBW4Qk' }
+                ].map((item, idx) => (
+                  <div key={idx} className="flex flex-col p-2.5 rounded bg-surface-container-low border border-outline-variant/20">
+                    <div className="w-full aspect-square rounded-DEFAULT bg-surface-container-lowest overflow-hidden mb-2 relative">
+                      <img className="w-full h-full object-cover" src={item.img} alt={item.name} />
+                      <span className="absolute top-1 left-1 bg-surface-container-lowest/90 px-1.5 py-0.5 rounded-full font-label-sm text-[9px] text-tertiary font-bold">
+                        {item.tag}
+                      </span>
+                    </div>
+                    <h4 className="font-title-md text-body-sm text-on-surface line-clamp-1">{item.name}</h4>
+                    <span className="font-body-sm text-label-sm text-outline">{item.meta}</span>
+                    <span className="font-price-catalog text-price-catalog text-primary mt-auto pt-1 font-bold">{item.price}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Action Footer */}
+              <div className="mt-space-md pt-space-sm border-t border-outline-variant/20 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div className="flex items-center gap-3">
+                  <div>
+                    <div className="flex items-baseline gap-1.5">
+                      <span className="font-headline-sm text-headline-sm text-on-surface font-extrabold">₹238</span>
+                      <span className="font-body-sm text-body-sm text-outline line-through">₹265</span>
+                      <span className="font-label-sm text-label-sm text-secondary font-bold">Save ₹27</span>
+                    </div>
+                    <p className="font-body-sm text-[11px] text-on-surface-variant">Includes all 5 curated morning staples</p>
+                  </div>
+                </div>
+                <button
+                  onClick={handleAddSmartBundle}
+                  className="w-full sm:w-auto px-6 py-3 rounded-full bg-primary text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 hover:bg-surface-tint active:scale-95 transition-all shadow-md"
+                >
+                  <span className="material-symbols-outlined text-lg">add_shopping_cart</span>
+                  Add Entire Bundle to Cart
+                </button>
+              </div>
+            </section>
+
+            {/* Trending & Recent Searches */}
+            <section className="space-y-space-sm">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-lg text-primary">trending_up</span>
+                  <h2 className="font-title-md text-title-md text-on-surface">Trending Right Now</h2>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+                {['Organic Cow Ghee', 'Blueberries', 'Greek Yogurt', 'Epsom Salt', 'Tender Coconut'].map((trend) => (
+                  <button
+                    key={trend}
+                    onClick={() => setSearchQuery(trend)}
+                    className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest border border-outline-variant/40 hover:border-primary text-on-surface text-label-md font-label-md flex-shrink-0 shadow-sm"
+                  >
+                    <span className="material-symbols-outlined text-sm text-secondary">local_fire_department</span>
+                    <span>{trend}</span>
+                  </button>
+                ))}
+              </div>
+            </section>
+
+            {/* Filters */}
+            <section className="space-y-space-xs">
+              <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+                {['All', 'Under ₹100', 'Organic Only', 'In Stock 10m', 'High Protein'].map(f => (
+                  <button
+                    key={f}
+                    onClick={() => setFilter(f)}
+                    className={`px-4 py-2 rounded-full font-label-md text-label-md flex-shrink-0 transition-all ${
+                      filter === f
+                        ? 'bg-primary text-on-primary font-bold shadow-sm'
+                        : 'bg-surface-container-lowest border border-outline-variant/50 text-on-surface hover:bg-surface-container'
+                    }`}
+                  >
+                    {f}
+                  </button>
+                ))}
+              </div>
+            </section>
+
+            {/* Matching Products */}
+            <section className="space-y-space-md">
+              <h3 className="font-headline-sm text-headline-sm text-on-surface">Top Matches For Your Query</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                {[
+                  { id: 'epigamia-wild', name: 'Epigamia Greek Yogurt', desc: 'Wild Blueberry • 120g', price: 60, tag: 'HIGH PROTEIN', eta: '9 mins', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDRPyNQQPFAhxnC3qPGM4LbzNTx6BwRyGFFotOTZjMJvutSSKHmAB2thDvd2Ock6vcW2KRxVPQ-WL9MaZiE8eOo9q2U9ifthlwX-tG2eHr5TBs4XhSjFxXIbdSDMhPQp_w33G1eW63fn3JQBriCfKnvxcOiDMLbsiW_X2kOXiMkyYRIYzjQ4rAcTibuIlOtqJyaDoJJruK7X3D1D0o6_2sqEo5-DPbm_cGDovRw1aw' },
+                  { id: 'sleepy-owl', name: 'Sleepy Owl Cold Brew', desc: 'Classic Black • 200ml', price: 90, tag: 'NO ADDED SUGAR', eta: '11 mins', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCC3fEn3hlXZbYX6uSl5OEHEtHh6ylC05R3kQO9C1itZEVMfs5RdONk9_9kVyGSfSpHWA-RYuX9i9UR0kd4-Om6rAFhxt3NYUqVIUdVr3RRmez_fTUoGq-OPE_dvwwtkoTm7w3qIuy0UjHOJkoFDDL645BkkJW4W8URT1vynTvPjNVsJHgpdUWzYdm3VulXyiwrOQ4zKzwBCGdROymUdnEC1Kxpf0QoTzPE6YRJxcU' },
+                  { id: 'truth-bar', name: 'The Whole Truth Bar', desc: 'Peanut Cocoa • 52g', price: 85, tag: '12G PROTEIN', eta: '8 mins', img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCqKlTo1od64_KsM3IqGG3fOYGdoY4iwbbG0NMofXW-XwzO1OYHqeWR9TDZ7HpTPDK4EQaoNtKayFSZYZZO2c3DjqJHwXDLuYYsYNVy4nxxrjFbXmSDCLzxJisoHyNJXn-DeZuCeEmXLi3Hf5JhHAIRNq9Bk-0ivwpU3oB7HkM66rmrKeXJKIsNPjUjp47PQRQG_KgeMegYDMCLM_LniuZ2L7l73lrAfljTk4w7zxc' }
+                ].map(item => (
+                  <div key={item.id} className="group bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30 p-space-md flex flex-col justify-between shadow-xs">
+                    <div>
+                      <div className="relative w-full aspect-square rounded bg-surface-container-low overflow-hidden mb-3">
+                        <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src={item.img} alt={item.name} />
+                        <div className="absolute top-2 left-2 bg-primary-container text-on-primary-container px-2 py-0.5 rounded-full font-label-sm text-label-sm flex items-center gap-1 font-bold">
+                          <span className="material-symbols-outlined text-xs">bolt</span>
+                          {item.eta}
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-1.5 mb-1">
+                        <span className="px-1.5 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label-sm text-[10px] font-bold">{item.tag}</span>
+                      </div>
+                      <h4 className="font-title-md text-title-md text-on-surface line-clamp-1">{item.name}</h4>
+                      <p className="font-body-sm text-body-sm text-outline">{item.desc}</p>
+                    </div>
+                    <div className="flex items-center justify-between mt-4 pt-2 border-t border-outline-variant/20">
+                      <span className="font-price-catalog text-price-catalog text-primary font-bold">₹{item.price}</span>
+                      <button
+                        onClick={() => {
+                          updateQty(item.id, 1, item);
+                          showToast(`Added ${item.name}!`);
+                        }}
+                        className="px-5 py-1.5 rounded-full border-2 border-primary text-primary hover:bg-primary-container font-label-md text-label-md font-bold transition-all shadow-sm"
+                      >
+                        ADD
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </main>
+
+          <BottomNavBar activeTab="search" />
+        </div>
+      );
+    }
+
+    // --- SCREEN 4: PRODUCT DETAILS (HASS AVOCADOS) ---
+    function ProductDetailsScreen() {
+      const navigate = useNavigate();
+      const { updateQty, totalItemsCount, showToast } = useCart();
+      const [qty, setQty] = useState(1);
+      const [isFav, setIsFav] = useState(false);
+      const [isBundleAdded, setIsBundleAdded] = useState(false);
+
+      const handleAddAvocados = () => {
+        updateQty('avocados', qty, {
+          id: 'avocados',
+          name: 'Fresh Ripe Hass Avocados (Pack of 2)',
+          desc: 'Ready to scoop • 380g',
+          price: 249,
+          originalPrice: 340
+        });
+        showToast(`Added ${qty} Avocados Pack to Cart!`);
+      };
+
+      const handleTogglePairing = () => {
+        if (!isBundleAdded) {
+          updateQty('guac-kit', 1, { id: 'guac-kit', name: 'Guac Kit: Lime & Fresh Coriander', price: 49 });
+          setIsBundleAdded(true);
+          showToast('Added Guac Kit bundle!');
+        } else {
+          updateQty('guac-kit', -1);
+          setIsBundleAdded(false);
+        }
+      };
+
+      return (
+        <div className="bg-background text-on-surface antialiased min-h-screen flex justify-center pb-28">
+          <main className="w-full max-w-md bg-surface min-h-screen flex flex-col relative shadow-sm border-x border-outline-variant/30">
+            {/* Header */}
+            <header className="sticky top-0 z-40 bg-surface/90 backdrop-blur-md px-margin-mobile py-space-sm flex items-center justify-between">
+              <button onClick={() => navigate(-1)} aria-label="Go back" className="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface shadow-sm">
+                <span className="material-symbols-outlined text-[20px]">arrow_back</span>
+              </button>
+              <span className="px-2.5 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm flex items-center gap-1 font-bold">
+                <span className="material-symbols-outlined text-[14px]" data-weight="fill">verified</span>
+                WRAPIT ORGANIC
+              </span>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setIsFav(!isFav)}
+                  className="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface shadow-sm"
+                >
+                  <span className={`material-symbols-outlined text-[20px] ${isFav ? 'text-error fill' : ''}`}>favorite</span>
+                </button>
+                <button
+                  onClick={() => navigate('/cart')}
+                  className="relative w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface shadow-sm"
+                >
+                  <span className="material-symbols-outlined text-[20px]">shopping_bag</span>
+                  {totalItemsCount > 0 && (
+                    <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm flex items-center justify-center font-bold">
+                      {totalItemsCount}
+                    </span>
+                  )}
+                </button>
+              </div>
+            </header>
+
+            {/* Product Image Carousel */}
+            <section className="relative px-margin-mobile pt-space-xs">
+              <div className="relative w-full aspect-square rounded-lg bg-surface-container-lowest overflow-hidden border border-outline-variant/30 flex items-center justify-center shadow-sm">
+                <img
+                  className="w-full h-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKXPQKrqrh9p66kZCIOH2XyAIPT4vcFpRY4XgPZZVeiWyjyf5CXWqk3vm1Rui9N_9cvbDsTGwqYRqXkAaIiIqORLBh7h0xNkUxfX8Pg5cz2TgvRmLX3bz7iiWRGExTxWTF--zOcebM7sLNtAJz34s5eisZZFVKxFsZIU8AVKlkj6aF712-e4l9OVgzg05N5UW7RnVEsBantcZhQ1xC96Psk0QGYraJYF3CFNQzH9U"
+                  alt="Avocado details"
+                />
+                <div className="absolute top-3 left-3 flex flex-col gap-1.5 z-10">
+                  <span className="px-2.5 py-1 rounded-full bg-primary-container/95 text-on-primary-container font-label-md text-label-md flex items-center gap-1.5 shadow-sm">
+                    <span className="material-symbols-outlined text-[15px]" data-weight="fill">spa</span>
+                    100% Certified Organic
+                  </span>
+                  <span className="px-2.5 py-1 rounded-full bg-surface-container-lowest/90 text-tertiary font-label-sm text-label-sm flex items-center gap-1 border border-outline-variant/30">
+                    <span className="material-symbols-outlined text-[13px]">calendar_month</span>
+                    Best within 4-5 days
+                  </span>
+                </div>
+                <div className="absolute bottom-3 right-3 px-2 py-0.5 rounded-full bg-inverse-surface/80 text-inverse-on-surface font-label-sm text-label-sm">
+                  1 / 4
+                </div>
+              </div>
+            </section>
+
+            {/* Delivery Ticker */}
+            <section className="px-margin-mobile mt-3">
+              <div className="bg-primary-container rounded-full px-3.5 py-2 flex items-center justify-between border border-primary/20 shadow-sm">
+                <div className="flex items-center gap-2">
+                  <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary">
+                    <span className="material-symbols-outlined text-[14px]" data-weight="fill">bolt</span>
+                  </div>
+                  <span className="font-label-md text-label-md text-on-primary-fixed-variant">
+                    Lightning Delivery in <span className="font-extrabold text-on-surface">12 mins</span>
+                  </span>
+                </div>
+                <span className="material-symbols-outlined text-[18px] text-on-primary-container">near_me</span>
+              </div>
+            </section>
+
+            {/* Title & Price */}
+            <section className="px-margin-mobile mt-4 flex flex-col gap-1.5">
+              <div className="flex items-center justify-between">
+                <span className="font-label-sm text-label-sm text-tertiary tracking-wide uppercase font-bold">FARM TO DOORSTEP · KODAIKANAL</span>
+                <div className="flex items-center gap-1 bg-surface-container-high px-2 py-0.5 rounded-full font-label-sm text-label-sm font-bold">
+                  <span className="material-symbols-outlined text-[13px] text-primary" data-weight="fill">star</span>
+                  <span>4.8</span>
+                  <span className="text-outline font-normal">(1.4k)</span>
+                </div>
+              </div>
+              <h1 className="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight leading-tight">
+                Fresh Ripe Hass Avocados (Pack of 2)
+              </h1>
+              <p className="font-body-sm text-body-sm text-on-surface-variant">Net weight: 380g – 440g · Ready to scoop</p>
+
+              <div className="flex items-baseline gap-2.5 mt-2">
+                <span className="font-price-hero text-price-hero text-secondary font-extrabold">₹249</span>
+                <span className="font-body-md text-body-md text-outline line-through">₹340</span>
+                <span className="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md font-bold">
+                  27% OFF
+                </span>
+                <span className="text-outline text-body-sm ml-auto font-body-sm">(₹124.50 / pc)</span>
+              </div>
+            </section>
+
+            {/* Badges Bento */}
+            <section className="px-margin-mobile mt-4">
+              <div className="grid grid-cols-3 gap-2">
+                <div className="bg-surface-container-lowest p-3 rounded-DEFAULT border border-outline-variant/30 flex flex-col items-center text-center shadow-sm">
+                  <span className="material-symbols-outlined text-[18px] text-tertiary mb-1">terrain</span>
+                  <span className="font-label-sm text-label-sm text-on-surface font-bold">Highland Grown</span>
+                  <span className="text-[10px] text-outline mt-0.5">2,100m elevation</span>
+                </div>
+                <div className="bg-surface-container-lowest p-3 rounded-DEFAULT border border-outline-variant/30 flex flex-col items-center text-center shadow-sm">
+                  <span className="material-symbols-outlined text-[18px] text-primary mb-1">ac_unit</span>
+                  <span className="font-label-sm text-label-sm text-on-surface font-bold">Cold Managed</span>
+                  <span className="text-[10px] text-outline mt-0.5">Kept at 6°C chain</span>
+                </div>
+                <div className="bg-surface-container-lowest p-3 rounded-DEFAULT border border-outline-variant/30 flex flex-col items-center text-center shadow-sm">
+                  <span className="material-symbols-outlined text-[18px] text-secondary mb-1">eco</span>
+                  <span className="font-label-sm text-label-sm text-on-surface font-bold">Zero Pesticides</span>
+                  <span className="text-[10px] text-outline mt-0.5">Lab tested safe</span>
+                </div>
+              </div>
+            </section>
+
+            {/* Accordions */}
+            <section className="px-margin-mobile mt-5 flex flex-col gap-2">
+              <details className="group bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30 overflow-hidden shadow-sm" open>
+                <summary className="flex items-center justify-between p-3.5 cursor-pointer list-none select-none">
+                  <div className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-primary text-[20px]">agriculture</span>
+                    <span className="font-title-md text-title-md text-on-surface">Farm Harvest & Traceability</span>
+                  </div>
+                  <span className="material-symbols-outlined text-outline transition-transform group-open:rotate-180">expand_more</span>
+                </summary>
+                <div className="px-3.5 pb-3.5 pt-1 text-on-surface-variant font-body-sm text-body-sm border-t border-surface-container">
+                  <div className="flex justify-between py-1 border-b border-surface-container-high/60">
+                    <span className="text-outline">Harvest Date:</span>
+                    <span className="font-medium text-on-surface">Yesterday, 05:30 AM</span>
+                  </div>
+                  <div className="flex justify-between py-1">
+                    <span className="text-outline">Orchard Partner:</span>
+                    <span className="font-medium text-on-surface">Shola Valley Eco Estate</span>
+                  </div>
+                </div>
+              </details>
+
+              <details className="group bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30 overflow-hidden shadow-sm">
+                <summary className="flex items-center justify-between p-3.5 cursor-pointer list-none select-none">
+                  <div className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-primary text-[20px]">nutrition</span>
+                    <span className="font-title-md text-title-md text-on-surface">Macronutrients (per 100g)</span>
+                  </div>
+                  <span className="material-symbols-outlined text-outline transition-transform group-open:rotate-180">expand_more</span>
+                </summary>
+                <div className="px-3.5 pb-3.5 pt-1 text-on-surface-variant font-body-sm text-body-sm border-t border-surface-container">
+                  <div className="grid grid-cols-4 gap-2 pt-2 text-center">
+                    <div className="bg-surface-container-low p-2 rounded-DEFAULT">
+                      <div className="font-price-catalog text-price-catalog text-on-surface font-bold">160</div>
+                      <div className="text-[10px] text-outline font-body-sm">Calories</div>
+                    </div>
+                    <div className="bg-surface-container-low p-2 rounded-DEFAULT">
+                      <div className="font-price-catalog text-price-catalog text-secondary font-bold">15g</div>
+                      <div className="text-[10px] text-outline font-body-sm">Good Fat</div>
+                    </div>
+                    <div className="bg-surface-container-low p-2 rounded-DEFAULT">
+                      <div className="font-price-catalog text-price-catalog text-on-surface font-bold">7g</div>
+                      <div className="text-[10px] text-outline font-body-sm">Fiber</div>
+                    </div>
+                    <div className="bg-surface-container-low p-2 rounded-DEFAULT">
+                      <div className="font-price-catalog text-price-catalog text-on-surface font-bold">2g</div>
+                      <div className="text-[10px] text-outline font-body-sm">Protein</div>
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </section>
+
+            {/* Pairing Bundle */}
+            <section className="px-margin-mobile mt-6 mb-24">
+              <div className="flex items-center justify-between mb-2.5">
+                <h2 className="font-headline-sm text-headline-sm text-on-surface">Perfect Pairing Bundle</h2>
+                <span className="font-label-sm text-label-sm text-secondary font-bold">Save ₹45</span>
+              </div>
+              <div className="bg-surface-container-lowest p-3.5 rounded-lg border border-outline-variant/30 flex items-center justify-between gap-3 shadow-sm">
+                <div className="flex items-center gap-3 min-w-0">
+                  <div className="w-14 h-14 rounded-DEFAULT bg-surface-container-low overflow-hidden flex-shrink-0">
+                    <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrQvZ_O0Jf4ayRujul5hJtdZesBgExXYx5oAzz7XNdJ7nCtUb-B0HZNhjlJo9V9iL9cqK0OYt5fnG56lL9BhaKYFhcvZ9_9NantmGZDO8-xfL7ZEYuIewJWuhTMgkfvl9eRlRQso2DZa5N4suIXKtQr-huhdcclHmphjFrRXd-B1tSGU0pwt-ZX9bkaVpmkG1pmbU8X5J1ub4QtGhK92584X58KXgblfBr--qJHO8" alt="Guac Kit" />
+                  </div>
+                  <div className="flex flex-col truncate">
+                    <span className="font-title-md text-title-md text-on-surface truncate">Guac Kit: Lime & Coriander</span>
+                    <span className="font-body-sm text-body-sm text-outline">Pack of 4 limes + 100g herb</span>
+                    <div className="flex items-center gap-2 mt-0.5">
+                      <span className="font-price-catalog text-price-catalog text-on-surface font-bold">₹49</span>
+                      <span className="text-[11px] text-outline line-through">₹75</span>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  onClick={handleTogglePairing}
+                  className={`flex-shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-label-md font-bold transition-transform ${
+                    isBundleAdded ? 'bg-secondary text-on-secondary' : 'border border-primary text-primary hover:bg-primary-container'
+                  }`}
+                >
+                  {isBundleAdded ? 'ADDED ✓' : '+ ADD'}
+                </button>
+              </div>
+            </section>
+
+            {/* Bottom Floating Action Deck */}
+            <aside className="fixed bottom-0 left-0 right-0 z-50 flex justify-center px-4 pb-4 pt-2">
+              <div className="w-full max-w-md bg-inverse-surface text-inverse-on-surface rounded-full p-2 pl-4 flex items-center justify-between shadow-2xl backdrop-blur-md">
+                <div className="flex items-center gap-3">
+                  <span className="text-[11px] font-label-sm text-surface-container-high tracking-wider uppercase font-bold">QTY</span>
+                  <div className="flex items-center bg-surface-container-lowest/10 rounded-full px-1.5 py-1">
+                    <button onClick={() => setQty(Math.max(1, qty - 1))} className="w-7 h-7 rounded-full flex items-center justify-center text-inverse-on-surface hover:bg-white/20">
+                      <span className="material-symbols-outlined text-[16px]">remove</span>
+                    </button>
+                    <span className="w-6 text-center font-title-md text-title-md text-inverse-on-surface font-bold">{qty}</span>
+                    <button onClick={() => setQty(qty + 1)} className="w-7 h-7 rounded-full flex items-center justify-center text-inverse-on-surface hover:bg-white/20">
+                      <span className="material-symbols-outlined text-[16px]">add</span>
+                    </button>
+                  </div>
+                </div>
+                <button
+                  onClick={handleAddAvocados}
+                  className="px-5 py-2.5 rounded-full bg-secondary text-on-secondary font-label-lg text-label-lg font-bold flex items-center gap-2 active:scale-95 transition-all shadow-md"
+                >
+                  <span className="material-symbols-outlined text-[18px]">shopping_bag</span>
+                  <span>Add ₹{qty * 249}</span>
+                </button>
+              </div>
+            </aside>
+          </main>
+        </div>
+      );
+    }
+
+    // --- SCREEN 5: MY ACCOUNT ---
+    function AccountScreen() {
+      const navigate = useNavigate();
+      const { showToast } = useCart();
+      const [pureVeg, setPureVeg] = useState(true);
+      const [whatsappUpdates, setWhatsappUpdates] = useState(true);
+
+      return (
+        <div className="bg-background text-on-surface antialiased min-h-screen pb-28">
+          <header className="fixed top-0 left-0 w-full z-40 bg-surface/95 backdrop-blur-md shadow-sm">
+            <div className="max-w-md mx-auto flex items-center justify-between px-margin-mobile py-space-sm h-16">
+              <button onClick={() => navigate(-1)} aria-label="Go Back" className="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container-lowest text-on-surface shadow-sm">
+                <span className="material-symbols-outlined text-[20px]">arrow_back</span>
+              </button>
+              <div className="flex flex-col items-center">
+                <h1 className="font-headline-sm text-headline-sm font-extrabold tracking-tight text-on-surface">My Account</h1>
+                <div className="flex items-center gap-1 mt-0.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+                  <span className="font-label-sm text-label-sm text-secondary font-bold">Wrapit Instant active</span>
+                </div>
+              </div>
+              <button onClick={() => showToast('No new notifications')} className="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container-lowest text-on-surface shadow-sm relative">
+                <span className="material-symbols-outlined text-[22px]">notifications</span>
+                <span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-secondary"></span>
+              </button>
+            </div>
+          </header>
+          <div className="h-16 w-full"></div>
+
+          <main className="max-w-md mx-auto px-margin-mobile pt-space-md space-y-space-md">
+            {/* User Profile */}
+            <section className="bg-surface-container-lowest rounded-DEFAULT p-space-md border border-outline-variant/30 shadow-xs relative overflow-hidden">
+              <div className="flex items-start justify-between relative z-10">
+                <div className="flex items-center gap-3.5">
+                  <div className="relative">
+                    <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-secondary p-0.5 bg-surface-container-low">
+                      <img className="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsQ88uOa9pjniuxN5ikkDFSRJkHAGWHLv14LVpUyMXx8O8kpIXgi_Gnxk_W3Tx5M3DgXLHCLMGsfAEDRbPYwvPcIFZ-xM5_GyzAOQ9NFg9ckFioxZYipzNN8g2eIXqPhLlT3r2udKtrXFA-GdtGJ1T0guj5vLl5-e5MBXih65R9IYVwTILMrvl_P2b4rpS6lUQVULqlIKU7izRX4ac4SAQI4-kMPvHDYYNfeNz0YGlKCNAZdpaRMN_" alt="Aarav Sharma" />
+                    </div>
+                    <div className="absolute -bottom-1 -right-1 bg-secondary text-on-secondary rounded-full p-1 flex items-center justify-center">
+                      <span className="material-symbols-outlined text-[13px]" data-weight="fill">verified</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h2 className="font-headline-sm text-headline-sm font-extrabold text-on-surface">Aarav Sharma</h2>
+                    <p className="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+                      <span className="material-symbols-outlined text-[14px]">call</span> +91 98765 43210
+                    </p>
+                    <p className="font-body-sm text-body-sm text-on-surface-variant/80 flex items-center gap-1.5">
+                      <span className="material-symbols-outlined text-[14px]">mail</span> aarav.sharma@example.com
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bento Stats */}
+              <div className="grid grid-cols-3 gap-2.5 mt-4">
+                <div className="bg-surface-container-low/70 rounded-DEFAULT p-2.5 flex flex-col justify-between border border-outline-variant/20">
+                  <span className="font-label-sm text-label-sm text-on-surface-variant font-medium">Total Orders</span>
+                  <span className="font-headline-sm text-headline-sm font-extrabold text-on-surface mt-1">28</span>
+                  <span className="font-label-sm text-label-sm text-secondary font-bold flex items-center gap-0.5 mt-0.5">
+                    <span className="material-symbols-outlined text-[12px]">trending_up</span> 100% On-Time
+                  </span>
+                </div>
+                <div className="bg-primary-container/30 rounded-DEFAULT p-2.5 flex flex-col justify-between border border-secondary/20">
+                  <span className="font-label-sm text-label-sm text-on-surface-variant font-medium">Saved with Pass</span>
+                  <span className="font-headline-sm text-headline-sm font-extrabold text-secondary mt-1">₹1,420</span>
+                  <span className="font-label-sm text-label-sm text-on-primary-container font-semibold mt-0.5">Free Delivery</span>
+                </div>
+                <div className="bg-surface-container-low/70 rounded-DEFAULT p-2.5 flex flex-col justify-between border border-outline-variant/20">
+                  <span className="font-label-sm text-label-sm text-on-surface-variant font-medium">Wrapit Wallet</span>
+                  <span className="font-headline-sm text-headline-sm font-extrabold text-on-surface mt-1">₹150</span>
+                  <span className="font-label-sm text-label-sm text-primary font-bold flex items-center gap-0.5 mt-0.5">
+                    <span className="material-symbols-outlined text-[12px]">add_circle</span> Add Cash
+                  </span>
+                </div>
+              </div>
+            </section>
+
+            {/* In-Transit Callout */}
+            <section className="bg-surface-container-lowest rounded-DEFAULT p-3.5 border-2 border-secondary/30 shadow-xs">
+              <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center gap-2">
+                  <span className="flex h-2.5 w-2.5 relative">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+                  </span>
+                  <span className="font-label-md text-label-md font-bold text-secondary uppercase">Live Order In Transit</span>
+                </div>
+                <span className="font-label-sm text-label-sm text-on-surface-variant font-bold">#WP-89211</span>
+              </div>
+              <div className="flex items-center justify-between bg-surface-container-low p-2.5 rounded-DEFAULT">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-fixed">
+                    <span className="material-symbols-outlined text-[22px]" data-weight="fill">electric_moped</span>
+                  </div>
+                  <div>
+                    <p className="font-title-md text-title-md text-on-surface leading-tight">Arriving in 9 mins</p>
+                    <p className="font-body-sm text-body-sm text-on-surface-variant">4 items • Fresh Organic Milk, Avocados...</p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => navigate('/tracking')}
+                  className="bg-secondary text-on-secondary px-3.5 py-1.5 rounded-full font-label-md text-label-md font-bold shadow-sm active:scale-95"
+                >
+                  Track
+                </button>
+              </div>
+            </section>
+
+            {/* Saved Delivery Addresses */}
+            <section className="bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30 shadow-xs overflow-hidden">
+              <div className="p-4 border-b border-outline-variant/20 flex items-center justify-between">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-secondary">
+                    <span className="material-symbols-outlined text-[19px]" data-weight="fill">pin_drop</span>
+                  </div>
+                  <h3 className="font-title-md text-title-md font-bold text-on-surface">Saved Delivery Addresses</h3>
+                </div>
+                <button onClick={() => showToast('Address editor opened')} className="flex items-center gap-1 font-label-md text-label-md text-secondary font-bold hover:underline">
+                  <span className="material-symbols-outlined text-[16px]">add</span> Add New
+                </button>
+              </div>
+              <div className="divide-y divide-outline-variant/15">
+                <div className="p-3.5 flex items-start justify-between hover:bg-surface-container/30">
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-full bg-primary-container text-on-primary-fixed flex items-center justify-center shrink-0 mt-0.5">
+                      <span className="material-symbols-outlined text-[18px]" data-weight="fill">home</span>
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <span className="font-title-md text-title-md font-bold text-on-surface">Home</span>
+                        <span className="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed/50 text-on-secondary-fixed font-bold">Default</span>
+                      </div>
+                      <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Flat 302, Indiranagar 4th Cross, Bengaluru</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* App Preferences */}
+            <section className="bg-surface-container-lowest rounded-DEFAULT border border-outline-variant/30 shadow-xs overflow-hidden">
+              <div className="p-4 border-b border-outline-variant/20 flex items-center justify-between">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-secondary">
+                    <span className="material-symbols-outlined text-[19px]" data-weight="fill">tune</span>
+                  </div>
+                  <h3 className="font-title-md text-title-md font-bold text-on-surface">App Settings</h3>
+                </div>
+              </div>
+              <div className="divide-y divide-outline-variant/15">
+                <div className="p-3.5 flex items-center justify-between">
+                  <div>
+                    <span className="font-label-lg text-label-lg text-on-surface font-bold">Pure Veg Mode</span>
+                    <p className="font-body-sm text-body-sm text-on-surface-variant">Filter out all non-veg items</p>
+                  </div>
+                  <input
+                    type="checkbox"
+                    checked={pureVeg}
+                    onChange={(e) => setPureVeg(e.target.checked)}
+                    className="w-5 h-5 text-secondary rounded focus:ring-secondary"
+                  />
+                </div>
+                <div className="p-3.5 flex items-center justify-between">
+                  <div>
+                    <span className="font-label-lg text-label-lg text-on-surface font-bold">WhatsApp Order Alerts</span>
+                    <p className="font-body-sm text-body-sm text-on-surface-variant">Live updates via message</p>
+                  </div>
+                  <input
+                    type="checkbox"
+                    checked={whatsappUpdates}
+                    onChange={(e) => setWhatsappUpdates(e.target.checked)}
+                    className="w-5 h-5 text-secondary rounded focus:ring-secondary"
+                  />
+                </div>
+              </div>
+            </section>
+
+            <button
+              onClick={() => showToast('Logged out of demo account')}
+              className="w-full py-3.5 px-4 rounded-DEFAULT bg-error-container/40 hover:bg-error-container text-error font-title-md text-title-md font-bold flex items-center justify-center gap-2 border border-error/20 active:scale-95 transition-all shadow-xs"
+            >
+              <span className="material-symbols-outlined text-[20px]">logout</span>
+              Log Out
+            </button>
+          </main>
+
+          <BottomNavBar activeTab="profile" />
+        </div>
+      );
+    }
+
+    // --- SCREEN 6: CATEGORY BROWSING (CHIPS & SNACKS) ---
+    function CategoryScreen() {
+      const navigate = useNavigate();
+      const { cartItems, updateQty, totalItemsCount } = useCart();
+      const [filter, setFilter] = useState('All');
+
+      const snackItems = [
+        { id: 'lays', brand: "Lay's", name: "India's Magic Masala Potato Chips", meta: '50g pouch', price: 20, img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD8xX3spW-urLlNq5uOSvkKxqgWbRtNCBQB8SCA0Z6IAhLrmmx8PNn26TnyBsVv4tTKSiCcT4iIkK7IyjKMgNb2HZg_1C5d-gNUwWurJA_rqfxEa6riZbdKPR8GN-ys1uBvcQsH-PrROpae4U39rV5tiHe7NkWpM3u50UR44CwDvEABg-67L1nnhpJkTgLu2_Ra-jDZbNXgNd0TujcNXUVA3iUWKJt457vFiSHYR4Y' },
+        { id: 'kurkure', brand: 'Kurkure', name: 'Masala Munch Crunchy Puffs', meta: '85g pack', price: 20, img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBi6Gbfnb7vTDhxoAwR7eO_SFyVPpL3hHaIXHS0OUKXKV1ataQVwyz9gzsC0NuvqnOi2srHODopt4l_mIOGuqJI3wQOtN7iaSafGAqegyiSB8NoMR_L8P1KT1fArORT2R4KyCCL3i_7oOq9CNCzOaYuIbsHT30EnPWZZn9Dh3TZ0nrzesxxu6J57mJ4-bTmTHecORFKah31BGcF5a-E4TfgUug1EYFbOqSJCqot9S4' },
+        { id: 'bhujia', brand: "Haldiram's", name: 'Nagpur Aloo Bhujia Namkeen', meta: '200g', price: 55, img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAURvt2CkPd0oPXfS14qonZaGenjAeCnoMddWRgnmUEyhzAe_HFzZ2zJJQSv2F-87UzXfeDwGQ0fbU9GVcgFljZeF4acUGtxJ8zzLRLH1y7tpowmWCGKo_gBCi-jRC3FDq-SA46Ln7bAGKONrX8bs9CIqv8PP3MHwa8qZc2lUHEzHLF10oE4I2bzUXKFu9-zhj7DaB6KOqlkgGXnITnOcqUPd8zU0Ge2LZWyOnO3pg' },
+        { id: 'mad-angles', brand: 'Bingo!', name: 'Mad Angles Achaari Masti', meta: '66g pouch', price: 20, img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBKCrnbGGXjcJ0XiRh4gYYwRHPbSuADEusuI4uw61M2M2UlzePgdOR39pYkdRu9AgKsPb4ukmhlolxTd77IgAd8rO6r3bZ-D9BOaupdrnZUeUR2TBBoZJ9zzQ2yxz671eCIUmsxtxJe44L9-HfGXwffPtUV4il4zJyeffA6tA-sGiSkiTdAGQ19wZAs6Y4voFWl6LXeReXv7y7IGTW-ySkNUSYd3yEQaKUOFQHduqg' },
+        { id: 'good-day', brand: 'Britannia', name: 'Good Day Butter Cookies (Party Pack)', meta: '600g', price: 119, img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCrnQfC5NHOlu7jo3rqtY9H1kaoHWlJo_cGYxBlLoB0MRKTjeDAqjKOTEFmkQZ7yRNVko5xYNyoBQ8D4I7r6Y0MoTH_BJGyDo0Iv2I_s-CSROGF1X7-dSFe1cVbi2JO8YhJ66kekVTQ11f-5o1FAhy6TF2GdzqFLQ1By2P0xp5Vda3KmDl4GtIqgKl_EdikC09gdNwYGYB_9CHyYBLv4edBdxxF9wJNqic275MnT-0' },
+        { id: 'parle-g', brand: 'Parle', name: 'Parle-G Gold Glucose Biscuits', meta: '1kg Family Pack', price: 85, img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAsEF6NpVbvLd0llVTbQV3MfYOqmSHO-b72ZZWCUPijI9z-kmo6_JnIJ631jtksCaAUeTzDO_gmCFcz5XMoz5fzyDr3eU9DS3FGEIjBLM_maZVGQxPFoEs-G785J1hJgN3B-U5YHKRsS7LC-hXv8yapa4wHg8ZkveoxwZwovpcxl_4o66mJtGeDY7-Oo8Vv03jgt6OiVqzFnso4GS1IRTmYJNzxEceS_xE91_8Jk_I' },
+        { id: 'silk', brand: 'Cadbury', name: 'Dairy Milk Silk Hazelnut Bar', meta: '143g', price: 175, img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBLWD5VhsKbrlpc1GVsiji7-ljd0aYdeG3NfFmRRovnPEoY0TueV61t_uzjNhArz7uDYmOxIIbDxhj6rDDrLnEFmHcDfPft5zDhxvPjBfpzAvGoxQUSE9CO1QaVhkKWYGZ24mb0nHqLPRhFU0c9lRvTaPeUoNgrLdaQ2_KSMCL0OL_ZO1LzAXBYML2BZHvJT7PHAtTSuZ53cmgH7bBjQ8zbr2clCM1WYcG0MBjaTBs' },
+        { id: 'maggi', brand: 'Nestlé', name: 'Maggi 2-Minute Masala Noodles', meta: 'Pack of 4, 280g', price: 54, img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBBiGThjCCoXT7n-niZWD_0k6Bwmyp2UeHBjsNfa3bZgErAJV-z4P2PJlNh5AYBbD92l5SG8lerXLK-2yIanaEyUrcqXniqJH7XVOAuC8o2GodRKRzrksmJ7yS6kk4GDaqb0E8uD4oebGSl9MGGKq5PA03st8BN2WlMxdyuuo-aaR7z6nfT4JYCofJEzGObYLnBJ4ItflvFrm4iwjs_2OKHUS8tTU3Sryj8zitBc-U' }
+      ];
+
+      return (
+        <div className="bg-background text-on-surface antialiased min-h-screen pb-36">
+          <header className="fixed top-0 left-0 w-full z-40 bg-surface/95 backdrop-blur-md shadow-sm">
+            <div className="max-w-md mx-auto px-margin-mobile pt-3 pb-2.5">
+              <div className="flex items-center justify-between gap-2">
+                <div className="flex items-center gap-2.5 min-w-0">
+                  <button onClick={() => navigate(-1)} className="w-9 h-9 rounded-full bg-surface-container-low flex items-center justify-center text-on-surface">
+                    <span className="material-symbols-outlined text-[20px]">arrow_back</span>
+                  </button>
+                  <div className="flex flex-col min-w-0">
+                    <div className="flex items-center gap-1.5">
+                      <h1 className="font-headline-sm text-headline-sm text-on-surface truncate tracking-tight">Chips & Snacks</h1>
+                      <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    </div>
+                    <div className="flex items-center gap-1 text-secondary">
+                      <span className="material-symbols-outlined text-[13px] font-bold">bolt</span>
+                      <span className="font-label-sm text-label-sm tracking-wide">11 mins delivery</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <button onClick={() => navigate('/search')} className="w-9 h-9 rounded-full bg-surface-container-lowest border border-outline-variant/40 flex items-center justify-center text-on-surface-variant">
+                    <span className="material-symbols-outlined text-[20px]">search</span>
+                  </button>
+                  <button onClick={() => navigate('/cart')} className="relative w-9 h-9 rounded-full bg-secondary flex items-center justify-center text-on-secondary">
+                    <span className="material-symbols-outlined text-[20px]">shopping_bag</span>
+                    {totalItemsCount > 0 && (
+                      <span className="absolute -top-1 -right-1 bg-primary-container text-on-primary-container text-[10px] font-bold h-4 min-w-[16px] px-1 rounded-full flex items-center justify-center">
+                        {totalItemsCount}
+                      </span>
+                    )}
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Horizontal Filter Chips */}
+            <div className="w-full bg-surface border-t border-outline-variant/20 px-margin-mobile py-2 overflow-x-auto no-scrollbar flex items-center gap-2">
+              {['All', 'Potato Chips', 'Namkeen & Bhujia', 'Kurkure & Puffs', 'Biscuits & Cookies'].map(chip => (
+                <button
+                  key={chip}
+                  onClick={() => setFilter(chip)}
+                  className={`flex-shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-label-md transition-all ${
+                    filter === chip
+                      ? 'bg-secondary text-on-secondary shadow-sm'
+                      : 'bg-surface-container-lowest border border-outline-variant/50 text-on-surface-variant hover:bg-surface-container-low'
+                  }`}
+                >
+                  {chip}
+                </button>
+              ))}
+            </div>
+          </header>
+
+          <main className="max-w-md mx-auto pt-28 px-margin-mobile">
+            <section className="flex items-center justify-between pt-2 pb-3">
+              <div className="flex items-center gap-1.5">
+                <span className="font-label-md text-label-md text-on-surface-variant font-medium">Showing</span>
+                <span className="font-headline-sm text-headline-sm text-on-surface font-extrabold tracking-tight">84 items</span>
+              </div>
+            </section>
+
+            <div className="grid grid-cols-2 gap-gutter-mobile">
+              {snackItems.map(item => (
+                <article key={item.id} className="bg-surface-container-lowest rounded-DEFAULT p-2.5 border border-outline-variant/30 flex flex-col justify-between shadow-xs">
+                  <div className="relative w-full aspect-square bg-surface-container-low rounded-[0.75rem] overflow-hidden mb-2 flex items-center justify-center p-2">
+                    <div className="absolute top-1.5 left-1.5 bg-primary-container/95 text-on-primary-container px-1.5 py-0.5 rounded-full flex items-center gap-0.5 z-10">
+                      <span className="material-symbols-outlined text-[11px]">bolt</span>
+                      <span className="font-label-sm text-[9px]">10m</span>
+                    </div>
+                    <img className="w-full h-full object-contain" src={item.img} alt={item.name} />
+                  </div>
+                  <div className="flex flex-col flex-grow">
+                    <p className="font-label-sm text-[10px] text-tertiary font-bold uppercase tracking-wider mb-0.5">{item.brand}</p>
+                    <h2 className="font-title-md text-[13px] leading-4 text-on-surface font-semibold line-clamp-2 min-h-[32px] mb-1">
+                      {item.name}
+                    </h2>
+                    <span className="font-body-sm text-body-sm text-on-surface-variant/80 mb-2">{item.meta}</span>
+                  </div>
+                  <div className="flex items-center justify-between pt-1 mt-auto border-t border-outline-variant/20">
+                    <span className="font-price-catalog text-price-catalog text-on-surface font-extrabold">₹{item.price}</span>
+                    <Stepper
+                      id={item.id}
+                      count={cartItems[item.id]?.count || 0}
+                      onAdd={() => updateQty(item.id, 1, item)}
+                      onRemove={() => updateQty(item.id, -1)}
+                    />
+                  </div>
+                </article>
+              ))}
+            </div>
+          </main>
+
+          <StickyCartPill />
+          <BottomNavBar activeTab="categories" />
+        </div>
+      );
+    }
+
+    // --- SCREEN 7: LIVE ORDER TRACKING ---
+    function TrackingScreen() {
+      const navigate = useNavigate();
+      const { showToast } = useCart();
+      const [eta, setEta] = useState(9);
+
+      useEffect(() => {
+        const interval = setInterval(() => {
+          setEta(prev => (prev > 1 ? prev - 1 : 1));
+        }, 15000);
+        return () => clearInterval(interval);
+      }, []);
+
+      return (
+        <div className="bg-background text-on-background min-h-screen pb-16">
+          <header className="sticky top-0 z-40 bg-surface/95 backdrop-blur-md px-margin-mobile md:px-margin py-space-sm border-b border-outline-variant/20 shadow-sm">
+            <div className="max-w-4xl mx-auto flex items-center justify-between">
+              <div className="flex items-center gap-space-sm">
+                <button
+                  onClick={() => navigate('/')}
+                  aria-label="Go Back"
+                  className="p-2 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors flex items-center justify-center active:scale-95"
+                >
+                  <span className="material-symbols-outlined text-[20px]">arrow_back</span>
+                </button>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <span className="font-headline-sm text-headline-sm text-on-surface tracking-tight">Order #WP-89211</span>
+                    <span className="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm uppercase tracking-wide">Live</span>
+                  </div>
+                  <p className="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+                    <span className="material-symbols-outlined text-[14px] text-secondary">timer</span>
+                    Placed at 10:42 AM • Instant Delivery
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={() => showToast('Connecting to Wrapit 24/7 Support...')}
+                className="px-3 py-1.5 rounded-full bg-surface-container-lowest border border-outline-variant/40 hover:border-primary text-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm"
+              >
+                <span className="material-symbols-outlined text-[16px]">help_outline</span>
+                <span>Help</span>
+              </button>
+            </div>
+          </header>
+
+          <main className="max-w-4xl mx-auto px-margin-mobile md:px-margin pt-space-md space-y-space-md">
+            {/* ETA Header */}
+            <section className="bg-surface-container-lowest rounded-lg p-space-md md:p-space-lg border border-outline-variant/30 shadow-xs">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+                <div className="space-y-space-xs">
+                  <div className="inline-flex items-center gap-2 bg-primary-container text-on-surface px-4 py-1.5 rounded-full shadow-sm">
+                    <span className="relative flex h-2.5 w-2.5">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+                    </span>
+                    <span className="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">
+                      Arriving in {eta} mins
+                    </span>
+                  </div>
+                  <h1 className="font-display-hero-mobile md:font-display-hero text-display-hero-mobile md:text-display-hero text-on-surface tracking-tight mt-1">
+                    Rider is speeding your way!
+                  </h1>
+                  <p className="font-body-md text-body-md text-on-surface-variant flex items-center gap-1.5">
+                    <span className="material-symbols-outlined text-secondary text-[18px]">electric_moped</span>
+                    Green Electric Dispatch from Indiranagar Hub
+                  </p>
+                </div>
+
+                {/* Rider Card */}
+                <div className="bg-surface-container-low rounded p-3 flex items-center gap-3 border border-outline-variant/20 sm:min-w-[260px]">
+                  <div className="relative">
+                    <div className="w-12 h-12 rounded-full overflow-hidden bg-surface-container ring-2 ring-primary-container">
+                      <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi2-Ix1Ndks5fmTidHyub632PZ6tlBOuIGVMZMtIrasyy9Nv_YmPgCecYXp47Ak60DmOhTWbpWJjUWCqdI40FIZPM6e_vLpNFv8P3BU3AI6hbJyxSXHAAhyN16GxEx0rVkWh3A7hCnxDpf3H60VpmYYq9LA8_dTpG01Zi0Ji23z5h9ujGbbLRwbf7do3JVp7Qa0wFIkJYvUMlyEwbQwGgwHXW-Bi1kROp332OKiGw" alt="Rider Ramesh" />
+                    </div>
+                    <div className="absolute -bottom-1 -right-1 bg-secondary text-on-secondary rounded-full p-0.5 flex items-center justify-center">
+                      <span className="material-symbols-outlined text-[12px]" data-weight="fill">verified</span>
+                    </div>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-1">
+                      <h2 className="font-title-md text-title-md text-on-surface truncate">Ramesh K.</h2>
+                      <span className="bg-surface-container-lowest text-on-surface text-[10px] font-bold px-1.5 py-0.2 rounded border border-outline-variant/40 flex items-center gap-0.5">
+                        ★ 4.9
+                      </span>
+                    </div>
+                    <p className="font-body-sm text-body-sm text-on-surface-variant truncate">Vaccinated & Eco-Certified</p>
+                  </div>
+                  <button
+                    onClick={() => showToast('Calling Rider Ramesh...')}
+                    className="w-10 h-10 rounded-full bg-primary-container text-on-surface hover:bg-secondary-container transition-colors flex items-center justify-center shrink-0 active:scale-95 shadow-sm"
+                  >
+                    <span className="material-symbols-outlined text-[20px]">call</span>
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            {/* Live GPS Telemetry Simulation */}
+            <section className="bg-surface-container-lowest rounded-lg border border-outline-variant/30 overflow-hidden shadow-xs">
+              <div className="p-space-sm sm:px-space-md border-b border-outline-variant/20 flex flex-wrap items-center justify-between gap-2 bg-surface-container-low/50">
+                <div className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary text-[20px]">navigation</span>
+                  <span className="font-label-lg text-label-lg text-on-surface">Live GPS Route Telemetry</span>
+                </div>
+                <div className="flex items-center gap-3 text-on-surface-variant font-body-sm text-body-sm">
+                  <span className="flex items-center gap-1">
+                    <span className="w-2.5 h-2.5 rounded-full bg-primary"></span> Dark Store #04
+                  </span>
+                  <span className="material-symbols-outlined text-[14px]">arrow_forward</span>
+                  <span className="flex items-center gap-1">
+                    <span className="w-2.5 h-2.5 rounded-full bg-secondary-container"></span> 4th Cross Home
+                  </span>
+                </div>
+              </div>
+
+              <div className="relative w-full h-72 sm:h-84 bg-[#EBF2EB] overflow-hidden select-none">
+                <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="xMidYMid slice" viewBox="0 0 600 300">
+                  <defs>
+                    <linearGradient id="routeGradient" x1="0%" x2="100%" y1="100%" y2="0%">
+                      <stop offset="0%" stopColor="#506625"></stop>
+                      <stop offset="50%" stopColor="#16C784"></stop>
+                      <stop offset="100%" stopColor="#103D2C"></stop>
+                    </linearGradient>
+                    <pattern height="40" id="urbanGrid" patternUnits="userSpaceOnUse" width="40">
+                      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#DCE8DC" strokeWidth="1.5"></path>
+                    </pattern>
+                  </defs>
+                  <rect fill="#EBF3EB" height="100%" width="100%"></rect>
+                  <rect fill="url(#urbanGrid)" height="100%" opacity="0.75" width="100%"></rect>
+                  <path d="M 0 120 L 600 100" stroke="#FFFFFF" strokeLinecap="round" strokeWidth="8"></path>
+                  <path d="M 120 0 L 160 300" stroke="#FFFFFF" strokeLinecap="round" strokeWidth="6"></path>
+                  <path d="M 340 0 L 300 300" stroke="#FFFFFF" strokeLinecap="round" strokeWidth="7"></path>
+                  <path d="M 46 220 C 110 200, 150 160, 210 130 C 270 100, 310 120, 360 70 C 400 30, 480 60, 520 40" fill="none" stroke="url(#routeGradient)" strokeDasharray="8 6" strokeLinecap="round" strokeWidth="6"></path>
+                </svg>
+
+                {/* Origin Store Pin */}
+                <div className="absolute left-8 bottom-12 -translate-x-1/2 flex flex-col items-center">
+                  <div className="bg-inverse-surface text-inverse-on-surface px-2.5 py-1 rounded-full text-[11px] font-bold shadow-md whitespace-nowrap mb-1.5 flex items-center gap-1 border border-primary-container/40">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                    Store #04
+                  </div>
+                  <div className="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg border-2 border-surface">
+                    <span className="material-symbols-outlined text-[16px]">storefront</span>
+                  </div>
+                </div>
+
+                {/* Animated Rider Pin */}
+                <div className="rider-track absolute left-0 top-0 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+                  <div className="relative flex items-center justify-center">
+                    <span className="absolute w-12 h-12 rounded-full bg-secondary/25 animate-ping"></span>
+                    <div className="w-10 h-10 rounded-full bg-primary-container border-2 border-on-surface shadow-xl flex items-center justify-center text-on-surface">
+                      <span className="material-symbols-outlined text-[22px]">electric_moped</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Destination Home Pin */}
+                <div className="absolute right-12 top-6 translate-x-1/2 flex flex-col items-center">
+                  <div className="bg-surface-container-lowest text-on-surface px-2.5 py-1 rounded-full text-[11px] font-bold shadow-md whitespace-nowrap mb-1.5 flex items-center gap-1 border border-outline-variant/40">
+                    <span className="material-symbols-outlined text-[12px] text-error fill">home</span>
+                    Your Home
+                  </div>
+                  <div className="w-7 h-7 rounded-full bg-error text-on-error flex items-center justify-center shadow-lg border-2 border-surface">
+                    <span className="material-symbols-outlined text-[16px] fill">location_on</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Delivery Milestones Stepper */}
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+              <section className="md:col-span-7 bg-surface-container-lowest rounded-lg p-space-md md:p-space-lg border border-outline-variant/30 shadow-xs">
+                <div className="flex items-center justify-between pb-space-sm border-b border-outline-variant/20 mb-space-md">
+                  <h2 className="font-headline-sm text-headline-sm text-on-surface tracking-tight">Delivery Milestones</h2>
+                  <span className="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-tertiary-container text-on-tertiary-container">
+                    Cold-Chain Verified
+                  </span>
+                </div>
+
+                <div className="relative pl-6 space-y-6 before:absolute before:left-[11px] before:top-2 before:bottom-3 before:w-0.5 before:bg-outline-variant/40">
+                  <div className="relative flex items-start gap-3">
+                    <div className="absolute -left-[30px] top-0.5 w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center ring-4 ring-surface-container-lowest">
+                      <span className="material-symbols-outlined text-[14px]">check</span>
+                    </div>
+                    <div>
+                      <p className="font-title-md text-title-md text-on-surface">Order Placed (10:42 AM)</p>
+                      <p className="font-body-sm text-body-sm text-on-surface-variant">Payment confirmed via UPI Instant</p>
+                    </div>
+                  </div>
+
+                  <div className="relative flex items-start gap-3">
+                    <div className="absolute -left-[30px] top-0.5 w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center ring-4 ring-surface-container-lowest">
+                      <span className="material-symbols-outlined text-[14px]">check</span>
+                    </div>
+                    <div>
+                      <p className="font-title-md text-title-md text-on-surface">Packed with Care (10:45 AM)</p>
+                      <p className="font-body-sm text-body-sm text-on-surface-variant">Inspected & bagged in insulated pouch (4°C)</p>
+                    </div>
+                  </div>
+
+                  <div className="relative flex items-start gap-3">
+                    <div className="absolute -left-[30px] top-0.5 w-6 h-6 rounded-full bg-primary-container border-2 border-primary text-on-surface flex items-center justify-center ring-4 ring-surface-container-lowest animate-pulse">
+                      <span className="w-2.5 h-2.5 rounded-full bg-primary"></span>
+                    </div>
+                    <div className="bg-primary-container/30 -m-1 p-2.5 rounded border border-primary-container">
+                      <p className="font-title-md text-title-md text-on-surface font-bold">Out for Delivery (10:48 AM)</p>
+                      <p className="font-body-sm text-body-sm text-on-surface mt-0.5">Ramesh K. has picked up items from Indiranagar Hub</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              {/* Basket Summary */}
+              <section className="md:col-span-5 bg-surface-container-lowest rounded-lg p-space-md border border-outline-variant/30 shadow-xs flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between pb-space-sm border-b border-outline-variant/20 mb-space-md">
+                    <h2 className="font-headline-sm text-headline-sm text-on-surface">Basket Summary</h2>
+                    <span className="px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+                      Paid • ₹328
+                    </span>
+                  </div>
+                  <ul className="space-y-3 divide-y divide-outline-variant/15">
+                    <li className="pt-2 first:pt-0 flex items-center justify-between">
+                      <span className="text-on-surface font-label-md">Hass Avocados (2 pcs)</span>
+                      <span className="font-price-catalog text-primary font-bold">₹149</span>
+                    </li>
+                    <li className="pt-2 flex items-center justify-between">
+                      <span className="text-on-surface font-label-md">Epigamia Greek Yogurt</span>
+                      <span className="font-price-catalog text-primary font-bold">₹60</span>
+                    </li>
+                    <li className="pt-2 flex items-center justify-between">
+                      <span className="text-on-surface font-label-md">Artisan Brown Bread</span>
+                      <span className="font-price-catalog text-primary font-bold">₹55</span>
+                    </li>
+                    <li className="pt-2 flex items-center justify-between">
+                      <span className="text-on-surface font-label-md">Amul Pasteurized Butter</span>
+                      <span className="font-price-catalog text-primary font-bold">₹64</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="mt-4 pt-2 border-t border-outline-variant/20 flex justify-between items-center text-body-sm text-outline">
+                  <span>Delivered to: 4th Cross Home</span>
+                  <button onClick={() => navigate('/account')} className="text-secondary font-bold hover:underline">Details</button>
+                </div>
+              </section>
+            </div>
+
+            <div className="text-center py-2">
+              <span className="inline-flex items-center gap-1.5 font-body-sm text-body-sm text-tertiary bg-tertiary-container/40 px-3 py-1 rounded-full">
+                <span className="material-symbols-outlined text-[14px]">energy_savings_leaf</span>
+                This trip saved 140g CO2 using a zero-emission electric battery vehicle
+              </span>
+            </div>
+          </main>
+        </div>
+      );
+    }
+
+    // --- MAIN APP CONTROLLER WITH ROUTER ---
+    function App() {
+      const { toastMsg } = useCart();
+
+      return (
+        <div className="relative min-h-screen">
+          {/* Toast Notification Container */}
+          {toastMsg && (
+            <div className="fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-4 py-2 rounded-full text-label-md font-medium shadow-lg transition-all animate-bounce">
+              {toastMsg}
+            </div>
+          )}
+
+          <Routes>
+            <Route path="/" element={<HomeScreen />} />
+            <Route path="/cart" element={<CartScreen />} />
+            <Route path="/search" element={<SearchScreen />} />
+            <Route path="/product/avocados" element={<ProductDetailsScreen />} />
+            <Route path="/account" element={<AccountScreen />} />
+            <Route path="/snacks" element={<CategoryScreen />} />
+            <Route path="/tracking" element={<TrackingScreen />} />
+          </Routes>
+        </div>
+      );
+    }
+
+    const container = document.getElementById('root');
+    const root = createRoot(container);
+    root.render(
+      <MemoryRouter>
+        <CartProvider>
+          <App />
+        </CartProvider>
+      </MemoryRouter>
+    );
+  </script>
+</body>
+</html>
